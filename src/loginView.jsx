@@ -69,10 +69,10 @@ export function LoginView(props) {
               >
                 <Card.Body className="login_container">
                   <Card.Title>
-                    Please Login or <Link to="/register">Register</Link>
+                    <img src={horntrax} alt="logo" />
                   </Card.Title>
                   <Card.Title>
-                    <img src={horntrax} alt="logo" />
+                    Please Login or <Link to="/register">Register</Link>
                   </Card.Title>
 
                   <Form>
