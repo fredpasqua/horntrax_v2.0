@@ -1,0 +1,46 @@
+.login_page {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.login_container {
+    font-family: 'Montserrat', sans-serif;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+}
+
+.login_container img {
+   text-align: center;
+   height: 200px; 
+   margin-right: 25px;
+}
+
+
+.button {
+    padding: 10px;
+    margin: 10px;
+   
+    margin: 20px;
+}
+
+
+.loginButton {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.loginButton Button {
+    width: 200px;
+    font-size: 25px;
+    color: rgb(222, 222, 222);
+
+}
+
+.loginButton Button:hover{
+    color:rgb(255, 255, 255);
+    box-shadow: rgba(10, 9, 9, 0.24) 0px 5px 10px;
+}
+

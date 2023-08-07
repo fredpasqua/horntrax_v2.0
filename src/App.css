@@ -1,38 +1,174 @@
-.App {
+body {
+  background-image: url(./Images/music.jpg);
+  background-size:130%;
+
+  height: 100vh;
+  width: 100vw;
+  opacity:1;
+}
+.top-container {
+ margin-top: 56px;
+
+
+}
+.btn {
+  font-size: calc(10px + 2vmin);
+  margin: 5px;
+  background-color:#046eab;
+}
+.btn:hover{
+  background-color:#03669f!important;
+  
+}
+.btn-delete {
+width: 50px !important;
+background-color:#046eab !important;
+
+}
+.btn-delete:hover {
+  width: 50px !important;
+  background-color: rgb(253, 0, 0) !important;
+  }
+.btn-instrument {
+  width: 175px;
+  font-size:24px !important;
+}
+.updateFormButtonsContainer {
+  margin-top: 30px;
+  text-align: center;
+}
+.btn-loaner-update {
+  width: 250px;
+  font-size:24px !important;
+}
+.deleteButton {
+  width: 250px;
+  font-size:24px !important; 
+  background-color:rgb(171, 0, 0) !important ;
+  margin-top: 50px;
+}
+.deleteButton:hover{
+  background-color: red !important;
+
+}
+
+
+
+
+h1 {
+  text-align: center;
+  font-family: opensans!important;
+border: none !important;
+}
+
+
+.loanersViewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  
+}
+.cards-container {
+z-index: 0;
+}
+
+
+
+.updateFormTitle {
+  text-align: center;
+  margin: 10px;
+
+}
+.searchBarAndButton {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.searchBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100vw;
+  justify-content: space-evenly;
+  background-color:lightgray;
+  border: 2px solid rgb(20, 116, 164);
+  padding: 10px;
+}
+
+.instrumentCounter  {
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 10px;
+  
+}
+
+.searchBar Input  {
+  height:40px;
+  align-self: center;
+  border-radius: 5px;
+  font-size: 22px;
+}
+.dropdown {
+  border: solid 1px rgb(67, 67, 67);
+ 
+  max-width: 33vw;
+  border-radius: 5px;
+
+}
+
+.form-label label {
+font-size:22px;
+padding: 10px;
+
+}
+.modal-text input
+{
+  font-size:22px;
+  max-width: 300px;
+  overflow:scroll;
+  
+}
+.welcome-message {
+  font-size: 22px;
+  height: 50px;
+  background-color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login_container {
+  background-color: white !important;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login_container img {
+
+margin-left: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.brand {
+  text-decoration: none;
+  font-weight: bold;
+  color: lightcoral;
 }
 
-.App-link {
-  color: #61dafb;
+.cardText {
+  font-size: 22px;
+}
+.useInfo {
+  max-width: 450px;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+Button.select {
+  
+  width: 50px;
 }
+
+
+
+
+
+
+
+
+

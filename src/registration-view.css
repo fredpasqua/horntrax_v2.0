@@ -1,0 +1,46 @@
+.registration {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.cardRegistration {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25rem;
+}
+
+.register_container {
+    font-family: 'Montserrat', sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.register_container img {
+    text-align: center;
+    height: 200px;
+}
+
+.registerButton {
+    text-align: center;
+    margin-top: 10px;
+}
+.registerButton Button {
+    width: 200px;
+    font-size: 25px;
+    color: rgb(222, 222, 222);
+}
+.registerButton Button:hover{
+    color:rgb(255, 255, 255)
+
+}
+
+.button {
+    padding: 10px;
+    margin: 10px;
+  
+    color: rgb(112, 106, 106);
+    margin: 20px;
+}
+
