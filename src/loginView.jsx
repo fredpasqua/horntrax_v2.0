@@ -118,6 +118,10 @@ export function LoginView(props) {
                       </Button>
                     </div>
                   </Form>
+                  <Card.Title>
+                    Try it!<br></br> Username: testtest <br></br>Password:
+                    password
+                  </Card.Title>
                 </Card.Body>
               </Card>
             </CardGroup>
