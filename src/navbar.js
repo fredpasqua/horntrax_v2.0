@@ -16,7 +16,7 @@ function Navigate(props) {
         >
           <Container className="navbar-container">
             <Navbar.Brand>
-              <Link class="brand" to="/client-loaners_project">
+              <Link class="brand" to="/">
                 HornTrax
               </Link>
             </Navbar.Brand>
