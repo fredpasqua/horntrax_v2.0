@@ -1,7 +1,7 @@
 {
   "name": "horntrax_v2.0",
   "version": "0.2.0",
-  "homepage": "https://fredpasqua.github.io/horntrax_v2.0",
+  "homepage": "https://fredpasqua.github.io/horntrax_v2.0/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

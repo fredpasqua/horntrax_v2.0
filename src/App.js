@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<InstrumentList />} />
-        <Route path="/client-loaners_project" element={<InstrumentList />} />
+        <Route exact path="/" element={<InstrumentList />} />
+        <Route path="/horntrax_v2.0" element={<InstrumentList />} />
         <Route path="register" element={<RegistrationView />} />
         <Route path="login" element={<InstrumentList />} />
       </Routes>
