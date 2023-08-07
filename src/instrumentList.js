@@ -159,11 +159,11 @@ function InstrumentList() {
 
   return (
     <>
-      <Navigate onLoggedOut={onLoggedOut} user={user} />
       {user.length === 0 ? (
         <LoginView setUser={setUser} forceUpdate={forceUpdate} />
       ) : (
         <div className="loanersViewContainer">
+          <Navigate onLoggedOut={onLoggedOut} user={user} />
           <div className="top-container">
             <div className="searchBar">
               <div className="searchBarAndButton">

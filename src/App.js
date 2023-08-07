@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="client-loaners_project" element={<InstrumentList />} />
+        <Route path="/" element={<InstrumentList />} />
+        <Route path="/client-loaners_project" element={<InstrumentList />} />
         <Route path="register" element={<RegistrationView />} />
         <Route path="login" element={<InstrumentList />} />
       </Routes>

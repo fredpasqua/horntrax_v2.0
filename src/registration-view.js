@@ -8,9 +8,9 @@ import {
   CardGroup,
   Container,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./registration-view.css";
-import Navigate from "./navbar";
 import horntrax from "./Images/HornTrax.png";
 export function RegistrationView() {
   const [username, setUsername] = useState("");
@@ -78,14 +78,15 @@ export function RegistrationView() {
 
   return (
     <>
-      <Navigate></Navigate>
       <Container className="registration"></Container>
       <Row>
         <Col lg={6} md={8} sm={10} className="cardRegistration">
           <CardGroup>
             <Card Card border="light">
               <Card.Body className="register_container">
-                <Card.Title>Please register a new user</Card.Title>
+                <Card.Title>
+                  Please register a new user or <Link to="/login">Login</Link>
+                </Card.Title>
 
                 <Card.Title>
                   <img src={horntrax} alt="logo" />

@@ -27,11 +27,7 @@ function Navigate(props) {
                   Register
                 </Link>
                 {props.user ? (
-                  <Link
-                    className="link"
-                    to="/client-loaners_project"
-                    onClick={props.onLoggedOut}
-                  >
+                  <Link className="link" to="/" onClick={props.onLoggedOut}>
                     Log Out
                   </Link>
                 ) : (
