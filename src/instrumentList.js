@@ -5,7 +5,6 @@ import {
   Button,
   InputGroup,
   Form,
-  Card,
   Modal,
   Table,
 } from "react-bootstrap";
@@ -234,56 +233,6 @@ function InstrumentList() {
               </tbody>
             </Table>
           </div>
-
-          {/* <div className="cards-container">
-            {filteredInstruments?.map((instrument) => (
-              <Card
-                style={{
-                  borderRadius: "4px",
-                  width: "100vw",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  marginTop: "10px",
-                }}
-                key={instrument._id}
-              >
-                <Card.Body>
-                  <Card.Title>
-                    <Button
-                      className="btn-instrument btn-primary"
-                      onClick={() => {
-                        setShowModal(true);
-                        setSelectedInstrument(instrument);
-                        setFormData({
-                          type: instrument.type,
-                          brand: instrument.brand,
-                          serial: instrument.serial,
-                          barcode: instrument.barcode,
-                          location: instrument.location,
-                          dateLastServiced: instrument.dateLastServiced.slice(
-                            0,
-                            10
-                          ),
-                        });
-                      }}
-                    >
-                      {instrument.type}
-                    </Button>
-                  </Card.Title>
-                  <Card.Text className="cardText">
-                    Brand: {instrument.brand}
-                    <br></br>
-                    Serial: {instrument.serial}
-                    <br></br>
-                    Location: {instrument.location}
-                    <br></br>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            ))}
-          </div> */}
         </div>
       )}
       <div className="reactModal">
@@ -324,7 +273,7 @@ function InstrumentList() {
           ></CloseButton>
           <div>
             <div className="useInfo">
-              <h2 className="updateFormTitle">Instrument: {formData.type}</h2>
+              <h2 className="updateFormTitle">{formData.type}</h2>
 
               <InputGroup className="modal-text">
                 <Form.Label>Brand: </Form.Label>

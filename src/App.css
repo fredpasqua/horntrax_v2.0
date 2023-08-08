@@ -34,7 +34,7 @@ background-color:#046eab !important;
   font-size:24px !important;
 }
 .updateFormButtonsContainer {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
 }
 .btn-loaner-update {
@@ -45,7 +45,7 @@ background-color:#046eab !important;
   width: 250px;
   font-size:24px !important; 
   background-color:rgb(171, 0, 0) !important ;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .deleteButton:hover{
   background-color: red !important;
@@ -75,6 +75,7 @@ z-index: 0;
 
 
 .updateFormTitle {
+  font-size: xx-large;
   text-align: center;
   margin: 10px;
 
@@ -121,10 +122,11 @@ font-size:22px;
 padding: 10px;
 
 }
-.modal-text input
+
+.modal-text 
 {
-  font-size:22px;
-  max-width: 300px;
+  font-size:20px;
+  max-width: 350px;
   overflow:scroll;
   
 }
@@ -163,6 +165,8 @@ Button.select {
   
   width: 50px;
 }
+
+
 
 
 
