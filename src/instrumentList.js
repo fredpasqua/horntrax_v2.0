@@ -164,6 +164,8 @@ function InstrumentList() {
         <div className="loanersViewContainer">
           <Navigate onLoggedOut={onLoggedOut} user={user} />
           <div className="top-container">
+            <AddLoaner forceUpdate={forceUpdate} user={user} />
+
             <div className="searchBar">
               <div className="searchBarAndButton">
                 <input
@@ -189,50 +191,45 @@ function InstrumentList() {
                 Total Instruments: {instruments.length}
               </p>
             </div>
-            <AddLoaner forceUpdate={forceUpdate} user={user} />
-
-            <Table variant="dark" striped bordered hover>
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Serial</th>
-                  <th>Location</th>
-                  <th>Edit</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredInstruments?.map((item) => (
-                  <tr key={item.barcode}>
-                    <td>{item.type}</td>
-                    <td>{item.serial}</td>
-                    <td>{item.location}</td>
-                    <td>
-                      <Button
-                        className="btn-instrument btn-primary select"
-                        onClick={() => {
-                          setShowModal(true);
-                          setSelectedInstrument(item);
-                          setFormData({
-                            type: item.type,
-                            brand: item.brand,
-                            serial: item.serial,
-                            barcode: item.barcode,
-                            location: item.location,
-                            dateLastServiced: item.dateLastServiced.slice(
-                              0,
-                              10
-                            ),
-                          });
-                        }}
-                      >
-                        <PencilSquare width="20" height="20" />
-                      </Button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
           </div>
+          <Table variant="dark" striped bordered hover>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Serial</th>
+                <th>Location</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredInstruments?.map((item) => (
+                <tr key={item.barcode}>
+                  <td>{item.type}</td>
+                  <td>{item.serial}</td>
+                  <td>{item.location}</td>
+                  <td>
+                    <Button
+                      className="btn-instrument btn-primary select"
+                      onClick={() => {
+                        setShowModal(true);
+                        setSelectedInstrument(item);
+                        setFormData({
+                          type: item.type,
+                          brand: item.brand,
+                          serial: item.serial,
+                          barcode: item.barcode,
+                          location: item.location,
+                          dateLastServiced: item.dateLastServiced.slice(0, 10),
+                        });
+                      }}
+                    >
+                      <PencilSquare width="20" height="20" />
+                    </Button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
         </div>
       )}
       <div className="reactModal">
