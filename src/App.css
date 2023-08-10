@@ -1,7 +1,6 @@
 body {
   background-image: url(./Images/music.jpg);
   background-size:130%;
-
   height: 100vh;
   width: 100vw;
   opacity:1;
@@ -11,17 +10,10 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  
 }
 .top-container {
-
 margin-top: 56px;
 position: static;
-
-
-
-
 }
 .btn {
   font-size: calc(10px + 2vmin);
@@ -45,10 +37,7 @@ background-color:#046eab !important;
   width: 175px;
   font-size:24px !important;
 }
-.updateFormButtonsContainer {
-  margin-top: 20px;
-  text-align: center;
-}
+
 .btn-loaner-update {
   width: 250px;
   font-size:24px !important;
@@ -61,7 +50,6 @@ background-color:#046eab !important;
 }
 .deleteButton:hover{
   background-color: red !important;
-
 }
 
 
@@ -70,7 +58,7 @@ background-color:#046eab !important;
 h1 {
   text-align: center;
   font-family: opensans!important;
-border: none !important;
+  border: none !important;
 }
 
 
@@ -81,12 +69,7 @@ z-index: 0;
 
 
 
-.updateFormTitle {
-  font-size: xx-large;
-  text-align: center;
-  margin: 10px;
 
-}
 .searchBarAndButton {
   display: flex;
   align-items: center;
@@ -119,25 +102,43 @@ z-index: 0;
 }
 .dropdown {
   border: solid 1px rgb(67, 67, 67);
- 
   max-width: 33vw;
   border-radius: 5px;
-
 }
 
 .form-label label {
 font-size:22px;
 padding: 10px;
-
 }
 
+/*styling for update modal */
+
+.useInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.updateFormTitle {
+  font-size: xx-large;
+  text-align: center;
+  margin: 10px;
+}
 .modal-text 
 {
   font-size:20px;
   max-width: 350px;
-  overflow:scroll;
-  
+  overflow: hidden;
 }
+.updateFormButtonsContainer {
+display: flex;
+flex-direction: column;
+padding: 10px;
+}
+
+
+
+
 .welcome-message {
   font-size: 22px;
   height: 50px;
@@ -163,10 +164,6 @@ margin-left: 25px;
 
 .cardText {
   font-size: 22px;
-}
-.useInfo {
-  max-width: 450px;
-  text-align: left;
 }
 
 Button.select {

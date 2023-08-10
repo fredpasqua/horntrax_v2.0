@@ -246,7 +246,7 @@ function InstrumentList() {
               zIndex: 2,
             },
             content: {
-              backgroundColor: "#71c7ec",
+              backgroundColor: "#1de2dc",
             },
           }}
         >
@@ -275,7 +275,7 @@ function InstrumentList() {
               <InputGroup className="modal-text">
                 <Form.Label>Brand: </Form.Label>
                 <Form.Control
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", borderRadius: "5px" }}
                   type="text"
                   value={formData.brand}
                   onChange={handleChange}
@@ -287,7 +287,7 @@ function InstrumentList() {
                 <br></br>
                 <Form.Label>Serial#:</Form.Label>
                 <Form.Control
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", borderRadius: "5px" }}
                   type="text"
                   value={formData.serial}
                   name="serial"
@@ -298,7 +298,7 @@ function InstrumentList() {
                 ></Form.Control>{" "}
                 <Form.Label>Barcode: </Form.Label>
                 <Form.Control
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", borderRadius: "5px" }}
                   type="number"
                   value={formData.barcode}
                   name="barcode"
@@ -309,9 +309,8 @@ function InstrumentList() {
                 ></Form.Control>{" "}
                 <Form.Label>Location: </Form.Label>
                 <Form.Control
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", borderRadius: "5px" }}
                   type="text"
-                  size="lg"
                   value={formData.location}
                   name="location"
                   placeholder={formData.location}
@@ -321,7 +320,7 @@ function InstrumentList() {
                 ></Form.Control>
                 <Form.Label>Last serviced:</Form.Label>
                 <Form.Control
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", borderRadius: "5px" }}
                   type="date"
                   name="dateLastServiced"
                   placeholder={formData.dateLastServiced}
