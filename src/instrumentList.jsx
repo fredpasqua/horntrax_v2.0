@@ -203,7 +203,7 @@ function InstrumentList() {
               </p>
             </div>
           </div>
-          <Table variant="dark" striped bordered hover>
+          <Table variant="dark" striped bordered hover className="table">
             <thead>
               <tr>
                 <th>Type</th>

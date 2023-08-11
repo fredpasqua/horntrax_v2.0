@@ -10,7 +10,7 @@ body {
 }
 .top-container {
 margin-top: 56px;
-position: static;
+width: 100vw !important;
 }
 .btn {
   font-size: calc(10px + 2vmin);
@@ -50,7 +50,9 @@ background-color:#046eab !important;
 }
 
 
-
+.table {
+  width: 100vw !important;
+}
 
 h1 {
   text-align: center;
