@@ -77,6 +77,7 @@ function InstrumentList() {
   };
 
   const onLoggedOut = () => {
+    setShowModal(false);
     setUser("");
   };
 
