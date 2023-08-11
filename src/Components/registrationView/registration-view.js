@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./registration-view.css";
-import horntrax from "./Images/HornTrax.png";
+import horntrax from "../../Images/HornTrax.png";
 export function RegistrationView() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

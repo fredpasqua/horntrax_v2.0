@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./AddLoaner.css";
+import "./addLoaner/AddLoaner.css";
 import Alert from "react-bootstrap/Alert";
 import Accordion from "react-bootstrap/Accordion";
 const AddLoaner = (props) => {
- 
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [message, setMessage] = useState("");
-  const [user, setUser] = useState(props.user);
+  const user = useState(props.user);
   const [formData, setFormData] = useState({
     type: "",
     brand: "",

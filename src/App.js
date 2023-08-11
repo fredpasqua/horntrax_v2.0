@@ -2,7 +2,7 @@ import "./App.css";
 import InstrumentList from "./instrumentList";
 import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { RegistrationView } from "./registration-view";
+import { RegistrationView } from "./Components/registrationView/registration-view.js";
 
 function App() {
   return (

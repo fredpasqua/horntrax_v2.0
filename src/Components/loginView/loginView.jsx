@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import { Card, Container, CardGroup, Col, Row, Button } from "react-bootstrap";
 import "./login-view.css";
 import axios from "axios";
-import horntrax from "./Images/HornTrax.png";
+import horntrax from "../../Images/HornTrax.png";
 import { Link } from "react-router-dom";
 
 export function LoginView(props) {
