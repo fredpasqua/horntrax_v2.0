@@ -13,14 +13,16 @@ export function LoginView(props) {
   const [usernameErr, setUsernameErr] = useState("");
   const [passwordErr, setPasswordErr] = useState("");
 
-  // validate user inputs
+  //form validation for user inputs
   const validate = () => {
     let isReq = true;
     if (!username) {
       setUsernameErr("Username Required");
       isReq = false;
-    } else if (username.length < 5) {
-      setUsernameErr("Username must be atleast 5 characters long");
+    } else if (username.length < 5 || username.length > 20) {
+      setUsernameErr(
+        "Username must be atleast 5 characters long and no more than 20 char."
+      );
       isReq = false;
     }
     if (!password) {
@@ -38,7 +40,10 @@ export function LoginView(props) {
     e.preventDefault();
     const isReq = validate();
     if (isReq) {
-      /* Send a request to the server for authentication */
+      //clear any previous form validation errors
+      setUsernameErr("") && setPasswordErr("");
+
+      //Send a request to the server for login authentication
       await axios
         .post(`https://horntrax-api.herokuapp.com/users/login/${username}`, {
           password: password,
