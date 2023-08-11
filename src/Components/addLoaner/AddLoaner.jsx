@@ -131,7 +131,7 @@ const AddLoaner = (props) => {
                   onChange={handleChange}
                 />
               </label>
-              <button className="loaner-submit" type="submit">
+              <button className="loaner-submit-button" type="submit">
                 Add Instrument
               </button>
             </form>
