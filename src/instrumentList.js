@@ -39,6 +39,10 @@ function InstrumentList() {
     message: "",
     show: false,
   });
+  const [updateMessage, setUpdateMessage] = useState({
+    message: "",
+    show: false,
+  });
 
   useEffect(() => {
     async function getLoaners() {
@@ -139,19 +143,25 @@ function InstrumentList() {
   const handleUpdateLoanerInfo = async (e, ID) => {
     e.preventDefault();
     try {
-      await axios.post(
-        `https://horntrax-api.herokuapp.com/loaners/update/${ID}`,
-        formData
-      );
-      setFormData({
-        type: "",
-        brand: "",
-        serial: "",
-        barcode: "",
-        location: "",
-      });
-      forceUpdate();
-      setShowModal(false);
+      await axios
+        .post(
+          `https://horntrax-api.herokuapp.com/loaners/update/${ID}`,
+          formData
+        )
+
+        .then((res) =>
+          setUpdateMessage({
+            message: "instrument updated successfully",
+            show: true,
+          })
+        )
+        .then(() =>
+          setTimeout(() => {
+            setUpdateMessage({ message: "", show: false });
+            setShowModal(false);
+            forceUpdate();
+          }, 2000)
+        );
     } catch (error) {
       console.error(error);
     }
@@ -251,14 +261,6 @@ function InstrumentList() {
             },
           }}
         >
-          {deleteMessage.show ? (
-            <Alert
-              variant="danger"
-              onClose={() => setDeleteMessage({ message: "", show: false })}
-            >
-              <Alert.Heading>{deleteMessage.message}</Alert.Heading>
-            </Alert>
-          ) : null}
           <CloseButton
             className="modalCloseButton"
             onClick={() => onRequestClose()}
@@ -348,6 +350,28 @@ function InstrumentList() {
                 >
                   Delete Instrument
                 </Button>
+              </div>
+              <div className="alerts">
+                {updateMessage.show ? (
+                  <Alert
+                    variant="primary"
+                    onClose={() =>
+                      setUpdateMessage({ message: "", show: false })
+                    }
+                  >
+                    <Alert.Heading>{updateMessage.message}</Alert.Heading>
+                  </Alert>
+                ) : null}
+                {deleteMessage.show ? (
+                  <Alert
+                    variant="danger"
+                    onClose={() =>
+                      setDeleteMessage({ message: "", show: false })
+                    }
+                  >
+                    <Alert.Heading>{deleteMessage.message}</Alert.Heading>
+                  </Alert>
+                ) : null}
               </div>
             </div>
           </div>
