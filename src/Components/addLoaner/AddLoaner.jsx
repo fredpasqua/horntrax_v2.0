@@ -82,7 +82,7 @@ const AddLoaner = (props) => {
 
             <form className="loaner-form" onSubmit={handleSubmit}>
               <label>
-                Instrument:
+                Instrument
                 <input
                   className="loaner-input"
                   type="text"
@@ -92,7 +92,7 @@ const AddLoaner = (props) => {
                 />
               </label>
               <label>
-                Brand:
+                Brand
                 <input
                   className="loaner-input"
                   type="text"
@@ -102,7 +102,7 @@ const AddLoaner = (props) => {
                 />
               </label>
               <label>
-                Serial:
+                Serial
                 <input
                   className="loaner-input"
                   type="text"
@@ -112,7 +112,7 @@ const AddLoaner = (props) => {
                 />
               </label>
               <label>
-                Barcode:
+                Barcode
                 <input
                   className="loaner-input"
                   type="number"
@@ -122,7 +122,7 @@ const AddLoaner = (props) => {
                 />
               </label>
               <label>
-                Location:
+                Location
                 <input
                   className="loaner-input"
                   type="text"
