@@ -9,7 +9,7 @@ import {
   Table,
 } from "react-bootstrap";
 import ReactModal from "react-modal";
-import AddLoaner from "./Components/AddLoaner";
+import AddLoaner from "./Components/addLoaner/AddLoaner.jsx";
 import Alert from "react-bootstrap/Alert";
 import DropDown from "./selectInstrumentType";
 import DropDownLocations from "./selectLocation";
