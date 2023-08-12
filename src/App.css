@@ -9,9 +9,13 @@ body {
   width: 100%;
 }
 .top-container {
+  display: flex;
+  flex-direction: column;
 margin-top: 56px;
 width: 100vw !important;
+
 }
+
 .btn {
   font-size: calc(10px + 2vmin);
   margin: 5px;
@@ -72,18 +76,24 @@ z-index: 0;
 .searchBarAndButton {
   display: flex;
   align-items: center;
-  width: 100vw;
+  height: 60px;
+  margin: 5px;
 }
 .searchBar {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  padding: 5px;
+  justify-content: space-around;
+
   width: 100vw;
-  justify-content: space-evenly;
+
   background-color:lightgray;
   border: 2px solid rgb(20, 116, 164);
-  padding: 10px;
+ 
   
+}
+.dropdown-menu {
+  display: flex
 }
 
 .instrumentCounter  {
@@ -94,13 +104,17 @@ z-index: 0;
 }
 
 .searchBar Input  {
-  height:40px;
+  height:60px;
   align-self: center;
   border-radius: 5px;
   font-size: 22px;
 }
+.searchBar Button {
+  height: 58px;
+  width: 58px;
+}
 .dropdown {
-  border: solid 1px rgb(67, 67, 67);
+  border: solid 2px rgb(67, 67, 67);
   max-width: 33vw;
   border-radius: 5px;
 }

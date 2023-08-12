@@ -174,9 +174,9 @@ function InstrumentList() {
       ) : (
         <div className="loanersViewContainer">
           <Navigate onLoggedOut={onLoggedOut} user={user} />
+
           <div className="top-container">
             <AddLoaner forceUpdate={forceUpdate} user={user} />
-
             <div className="searchBar">
               <div className="searchBarAndButton">
                 <input
@@ -188,27 +188,33 @@ function InstrumentList() {
                   <Button onClick={() => clear()}>X</Button>
                 </div>
               </div>
-              <DropDown
-                data={instruments}
-                action={updateSelectedType}
-                selector={{ value: "type" }}
-              />
-              <DropDownLocations
-                data={instruments}
-                action={updateSelectedLocation}
-                selector={{ value: "location" }}
-              />
+
               <p className="instrumentCounter">
                 Total Instruments: {instruments.length}
               </p>
             </div>
           </div>
-          <Table variant="dark" striped bordered hover className="table">
+          <Table variant="light" striped bordered hover className="table">
             <thead>
               <tr>
-                <th>Type</th>
+                <th>
+                  {" "}
+                  <DropDown
+                    data={instruments}
+                    action={updateSelectedType}
+                    selector={{ value: "type" }}
+                    styles={{ backgroundColorStyle: "neutral150" }}
+                  />
+                </th>
+                <th>
+                  {" "}
+                  <DropDownLocations
+                    data={instruments}
+                    action={updateSelectedLocation}
+                    selector={{ value: "location" }}
+                  />
+                </th>{" "}
                 <th>Serial</th>
-                <th>Location</th>
                 <th>Edit</th>
               </tr>
             </thead>
@@ -216,8 +222,9 @@ function InstrumentList() {
               {filteredInstruments?.map((item) => (
                 <tr key={item.barcode}>
                   <td>{item.type}</td>
-                  <td>{item.serial}</td>
                   <td>{item.location}</td>
+                  <td>{item.serial}</td>
+
                   <td>
                     <Button
                       className="btn-instrument btn-primary select"
