@@ -1,7 +1,6 @@
 body {
   background-image: url(./Images/music.jpg);
-  opacity:1;
-
+  opacity: 1;
 }
 .loanersViewContainer {
   display: flex;
@@ -11,48 +10,44 @@ body {
 .top-container {
   display: flex;
   flex-direction: column;
-margin-top: 56px;
-width: 100vw !important;
-
+  margin-top: 56px;
+  width: 100vw !important;
 }
 
 .btn {
   font-size: calc(10px + 2vmin);
   margin: 5px;
-  background-color:#046eab;
+  background-color: #046eab;
 }
-.btn:hover{
-  background-color:#03669f!important;
-  
+.btn:hover {
+  background-color: #03669f !important;
 }
 .btn-delete {
-width: 50px !important;
-background-color:#046eab !important;
-
+  width: 50px !important;
+  background-color: #046eab !important;
 }
 .btn-delete:hover {
   width: 50px !important;
   background-color: rgb(253, 0, 0) !important;
-  }
+}
 .btn-instrument {
   width: 175px;
-  font-size:24px !important;
+  font-size: 24px !important;
 }
 
 .btn-loaner-update {
   width: 250px;
-  font-size:24px !important;
+  font-size: 24px !important;
 }
 .deleteButton {
   width: 250px;
-  font-size:24px !important; 
-  background-color:rgb(171, 0, 0) !important ;
+  font-size: 24px !important;
+  background-color: rgb(171, 0, 0) !important ;
   margin-top: 20px;
 }
-.deleteButton:hover{
+.deleteButton:hover {
   background-color: red !important;
 }
-
 
 .table {
   width: 100vw !important;
@@ -60,18 +55,13 @@ background-color:#046eab !important;
 
 h1 {
   text-align: center;
-  font-family: opensans!important;
+  font-family: opensans !important;
   border: none !important;
 }
 
-
-
 .cards-container {
-z-index: 0;
+  z-index: 0;
 }
-
-
-
 
 .searchBarAndButton {
   display: flex;
@@ -87,24 +77,21 @@ z-index: 0;
 
   width: 100vw;
 
-  background-color:lightgray;
+  background-color: lightgray;
   border: 2px solid rgb(20, 116, 164);
- 
-  
 }
 .dropdown-menu {
-  display: flex
+  display: flex;
 }
 
-.instrumentCounter  {
+.instrumentCounter {
   font-weight: bold;
   margin-right: 10px;
   padding: 10px;
-  
 }
 
-.searchBar Input  {
-  height:60px;
+.searchBar Input {
+  height: 60px;
   align-self: center;
   border-radius: 5px;
   font-size: 22px;
@@ -120,8 +107,8 @@ z-index: 0;
 }
 
 .form-label label {
-font-size:22px;
-padding: 10px;
+  font-size: 22px;
+  padding: 10px;
 }
 
 /*styling for update modal */
@@ -137,20 +124,16 @@ padding: 10px;
   text-align: center;
   margin: 10px;
 }
-.modal-text 
-{
-  font-size:20px;
+.modal-text {
+  font-size: 20px;
   max-width: 350px;
   overflow: hidden;
 }
 .updateFormButtonsContainer {
-display: flex;
-flex-direction: column;
-padding: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
-
-
-
 
 .welcome-message {
   font-size: 22px;
@@ -161,12 +144,10 @@ padding: 10px;
 
 .login_container {
   background-color: white !important;
-  
 }
 
 .login_container img {
-
-margin-left: 25px;
+  margin-left: 25px;
 }
 
 .brand {
@@ -182,14 +163,3 @@ margin-left: 25px;
 Button.select {
   width: 50px;
 }
-
-
-
-
-
-
-
-
-
-
-
