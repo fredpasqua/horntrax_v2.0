@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/horntrax_v2.0/static/css/main.c45f7588.css",
-    "main.js": "/horntrax_v2.0/static/js/main.55ea5659.js",
+    "main.js": "/horntrax_v2.0/static/js/main.c19693dd.js",
     "static/media/music.jpg": "/horntrax_v2.0/static/media/music.8341c78eefdf0b1344ec.jpg",
     "static/media/HornTrax.png": "/horntrax_v2.0/static/media/HornTrax.23d7c509f4d8a5332450.png",
     "index.html": "/horntrax_v2.0/index.html",
     "main.c45f7588.css.map": "/horntrax_v2.0/static/css/main.c45f7588.css.map",
-    "main.55ea5659.js.map": "/horntrax_v2.0/static/js/main.55ea5659.js.map"
+    "main.c19693dd.js.map": "/horntrax_v2.0/static/js/main.c19693dd.js.map"
   },
   "entrypoints": [
     "static/css/main.c45f7588.css",
-    "static/js/main.55ea5659.js"
+    "static/js/main.c19693dd.js"
   ]
 }
