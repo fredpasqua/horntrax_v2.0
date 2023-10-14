@@ -163,3 +163,23 @@ h1 {
 Button.select {
   width: 50px;
 }
+
+.btn-instrument svg {
+  position: relative;
+  top: -3px;
+}
+
+@media (max-width: 600px) {
+  .table-style {
+
+    margin: 5px !important;
+    font-size: smaller !important;
+  }
+
+  .dropdown {
+    margin: 5px !important;
+    font-size: smaller !important;
+
+
+  }
+}
