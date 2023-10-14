@@ -188,17 +188,19 @@ function InstrumentList() {
                   <Button onClick={() => clear()}>X</Button>
                 </div>
               </div>
-              <DropDownLocations
-                data={instruments}
-                action={updateSelectedLocation}
-                selector={{ value: "location" }}
-              />
-              <DropDown
-                data={instruments}
-                action={updateSelectedType}
-                selector={{ value: "type" }}
-                styles={{ backgroundColorStyle: "neutral150" }}
-              />
+              <div className="dropDownContainer">
+                <DropDownLocations
+                  data={instruments}
+                  action={updateSelectedLocation}
+                  selector={{ value: "location" }}
+                />
+                <DropDown
+                  data={instruments}
+                  action={updateSelectedType}
+                  selector={{ value: "type" }}
+                  styles={{ backgroundColorStyle: "neutral150" }}
+                />
+              </div>
               <p className="instrumentCounter">
                 Total Instruments: {instruments.length}
               </p>
