@@ -4,12 +4,15 @@
     align-items: center;
     
 }
+.logo {
+    align-self: center;
+}
 
 .login_container {
     font-family: 'Montserrat', sans-serif;
     width: auto;
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;    
 }
 
@@ -19,12 +22,26 @@
    margin-right: 25px;
 }
 
+.welcome {
+    font-size: x-large;
+}
 
+.logPrompt {
+    color: grey !important;
+}
+
+.formUsername,
+.formPassword {
+    font-weight: 300;
+    font-size: large;
+    margin: 10px;
+
+}
+    
 .button {
     padding: 10px;
     margin: 10px;
-   
-    margin: 20px;
+    background-color: rgb(0, 157, 255) !important;
 }
 
 
@@ -45,3 +62,6 @@
     box-shadow: rgba(10, 9, 9, 0.24) 0px 5px 10px;
 }
 
+.tryit {
+    align-self: center;
+}

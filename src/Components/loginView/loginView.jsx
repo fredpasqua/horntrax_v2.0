@@ -73,18 +73,17 @@ export function LoginView(props) {
                 style={{ width: "25rem", marginTop: "50px" }}
               >
                 <Card.Body className="login_container">
-                  <Card.Title>
+                  <Card.Title className="logo">
                     <img src={horntrax} alt="logo" />
                   </Card.Title>
-                  <Card.Title>
+                  <div className="welcome">Welcome</div>
+                  <Card.Title className="logPrompt">
                     Please Login or <Link to="/register">Register</Link>
                   </Card.Title>
 
                   <Form>
                     <Form.Group controlId="formUsername">
-                      <Form.Label className="formUsername">
-                        Username:
-                      </Form.Label>
+                      <Form.Label className="formUsername">Username</Form.Label>
                       <Form.Control
                         type="text"
                         onChange={(e) => setUsername(e.target.value)}
@@ -98,9 +97,7 @@ export function LoginView(props) {
                     </Form.Group>
 
                     <Form.Group controlId="formPassword">
-                      <Form.Label className="formPassword">
-                        Password:
-                      </Form.Label>
+                      <Form.Label className="formPassword">Password</Form.Label>
                       <Form.Control
                         type="password"
                         onChange={(e) => setPassword(e.target.value)}
@@ -119,12 +116,12 @@ export function LoginView(props) {
                         type="submit"
                         onClick={handleSubmit}
                       >
-                        Submit
+                        Log In
                       </Button>
                     </div>
                   </Form>
-                  <Card.Title>
-                    Try it!<br></br> Username: testtest <br></br>Password:
+                  <Card.Title className="tryit">
+                    Try us out...<br></br> Username: testtest <br></br>Password:
                     password
                   </Card.Title>
                 </Card.Body>
