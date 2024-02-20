@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 function Navigate(props) {
+  const user = props.user.username;
   return (
     <div className="navstyle">
       <Container>
@@ -20,12 +21,10 @@ function Navigate(props) {
                 HornTrax
               </Link>
             </Navbar.Brand>
+            <p className="welcomeMessage">Welcome back, {user}!</p>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto links">
-                <Link className="link" to="/register">
-                  Register
-                </Link>
                 {props.user ? (
                   <Link
                     className="link"

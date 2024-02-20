@@ -1,4 +1,12 @@
-.link{
-
+.link {
+    position: relative;
     padding: 6px;
+    right: 0px;
+}
+
+.welcomeMessage {
+    padding: 6px;
+    left: auto;
+        right: auto;
+        margin: 0px;
 }
