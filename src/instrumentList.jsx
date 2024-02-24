@@ -180,6 +180,7 @@ function InstrumentList() {
             <div className="searchBar">
               <div className="searchBarAndButton">
                 <input
+                  className="inputSearchBox"
                   onChange={(event) => setQuery(event.target.value)}
                   value={query}
                   placeholder="search anything..."
