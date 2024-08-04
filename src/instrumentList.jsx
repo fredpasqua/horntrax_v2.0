@@ -203,7 +203,7 @@ function InstrumentList() {
                 />
               </div>
               <p className="instrumentCounter">
-                Total Instruments: {instruments.length}
+                Total Instruments: {filteredInstruments.length}
               </p>
             </div>
           </div>
