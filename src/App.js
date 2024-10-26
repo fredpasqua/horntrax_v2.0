@@ -13,7 +13,7 @@ function App() {
         <Route path="/horntrax_v2.0" element={<InstrumentList />} />
         <Route path="register" element={<RegistrationView />} />
         <Route path="login" element={<InstrumentList />} />
-        <Route path="/scanner" element={<Scanner />} />
+        <Route path="scanner" element={<Scanner />} />
       </Routes>
     </div>
   );

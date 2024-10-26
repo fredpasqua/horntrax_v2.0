@@ -42,6 +42,9 @@ function Navigate(props) {
                     Log In
                   </Link>
                 )}
+                <Link className="link" to="/scanner">
+                  Scan
+                </Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
