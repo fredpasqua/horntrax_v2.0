@@ -1,5 +1,6 @@
 import "./App.css";
 import InstrumentList from "./instrumentList";
+import Scanner from "./Scanner.jsx";
 import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { RegistrationView } from "./Components/registrationView/registration-view.js";
@@ -12,6 +13,7 @@ function App() {
         <Route path="/horntrax_v2.0" element={<InstrumentList />} />
         <Route path="register" element={<RegistrationView />} />
         <Route path="login" element={<InstrumentList />} />
+        <Route path="/scanner" element={<Scanner />} />
       </Routes>
     </div>
   );

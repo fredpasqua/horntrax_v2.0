@@ -187,6 +187,12 @@ Button.select {
   position: relative;
   top: -3px;
 }
+.scanner {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+}
 
 .alerts {
 
