@@ -1,6 +1,8 @@
 body {
   background-image: url(./Images/music.jpg);
   opacity: 1;
+  padding: 0px;
+    margin: 0px;
 }
 .loanersViewContainer {
   display: flex;
