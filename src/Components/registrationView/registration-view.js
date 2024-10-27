@@ -85,18 +85,19 @@ export function RegistrationView() {
             <Card Card border="light">
               <Card.Body className="register_container">
                 <Card.Title>
+                  <img src={horntrax} alt="logo" />
+                </Card.Title>
+
+                <Card.Title className="logPrompt">
                   Please register a new user or <Link to="/login">Login</Link>
                 </Card.Title>
 
-                <Card.Title>
-                  <img src={horntrax} alt="logo" />
-                </Card.Title>
                 <Form>
                   <Form.Group
                     controlId="formUsername"
                     className="reg-form-inputs"
                   >
-                    <Form.Label>Username:</Form.Label>
+                    <Form.Label>Username</Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="atleast 3 characters long"
@@ -114,7 +115,7 @@ export function RegistrationView() {
                     controlId="formPassword"
                     className="reg-form-inputs"
                   >
-                    <Form.Label>Password:</Form.Label>
+                    <Form.Label>Password</Form.Label>
                     <Form.Control
                       type="password"
                       placeholder="atleast 5 characters long"
@@ -129,7 +130,7 @@ export function RegistrationView() {
                   </Form.Group>
 
                   <Form.Group controlId="Email" className="reg-form-inputs">
-                    <Form.Label>Email:</Form.Label>
+                    <Form.Label>Email</Form.Label>
                     <Form.Control
                       type="email"
                       placeholder="must be a unique email"
