@@ -18,6 +18,7 @@ import { LoginView } from "./Components/loginView/loginView";
 import Navigate from "./Components/navBar/navbar.js";
 import { PencilSquare } from "react-bootstrap-icons";
 import QRcodeGenerator from "./QRcodeGenerator.jsx";
+import QrCodePrintScreen from "./Components/qrCodePrintScreen/qrCodePrintScreen.jsx";
 
 function InstrumentList() {
   const [instruments, setInstruments] = useState([]);
@@ -258,13 +259,14 @@ function InstrumentList() {
               ))}
             </tbody>
           </Table>
+          <QrCodePrintScreen filteredInstruments={filteredInstruments} />
         </div>
       )}
-      <div className="qrCodeContainer">
+      {/* <div className="qrCodeContainer">
         {filteredInstruments?.map((item) => (
           <QRcodeGenerator barcode={item.barcode} key={item.barcode} />
         ))}
-      </div>
+      </div> */}
 
       <div className="reactModal">
         <ReactModal
