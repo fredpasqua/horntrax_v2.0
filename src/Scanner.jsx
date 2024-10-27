@@ -2,13 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { BarcodeScanner } from "@thewirv/react-barcode-scanner";
 
-export default function Scanner() {
+export default function Scanner({ handleScan }) {
   const [data, setData] = useState("No result");
 
   return (
     <>
       <BarcodeScanner
-        doScan={true}
         onSuccess={(text) => setData(text)}
         onError={(error) => {
           if (error) {
@@ -16,9 +15,9 @@ export default function Scanner() {
           }
         }}
         onLoad={() => console.log("Video feed has loaded!")}
-        containerStyle={{ width: "30%" }}
+        containerStyle={{ width: "10%" }}
       />
-      <p>{data}</p>
+      <button onClick={() => handleScan(data)}>{data}</button>
     </>
   );
 }

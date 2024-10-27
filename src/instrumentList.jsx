@@ -8,6 +8,7 @@ import {
   Modal,
   Table,
 } from "react-bootstrap";
+import Scanner from "./Scanner.jsx";
 import ReactModal from "react-modal";
 import AddLoaner from "./Components/addLoaner/AddLoaner.jsx";
 import Alert from "react-bootstrap/Alert";
@@ -22,6 +23,7 @@ function InstrumentList() {
   const [user, setUser] = useState("");
   const [selectedInstrument, setSelectedInstrument] = useState({});
   const [query, setQuery] = useState([]);
+  const [code, setCode] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedType, setSelectedType] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
@@ -83,6 +85,12 @@ function InstrumentList() {
   const onLoggedOut = () => {
     setShowModal(false);
     setUser("");
+  };
+
+  //function to update state of query from scanner component
+  const handleScan = (code) => {
+    setCode(code);
+    setQuery(code);
   };
 
   //creates a list of  instruments prefiltered by selectedType state
@@ -205,6 +213,7 @@ function InstrumentList() {
               <p className="instrumentCounter">
                 Total Instruments: {filteredInstruments.length}
               </p>
+              <Scanner handleScan={handleScan}></Scanner>
             </div>
           </div>
           <Table variant="light" striped bordered hover className="table">
