@@ -70,7 +70,7 @@ export function LoginView(props) {
               <Card
                 Card
                 border="light"
-                style={{ width: "25rem", marginTop: "50px" }}
+                style={{ width: "20rem", marginTop: "50px" }}
               >
                 <Card.Body className="login_container">
                   <Card.Title className="logo">

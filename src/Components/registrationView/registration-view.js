@@ -78,89 +78,95 @@ export function RegistrationView() {
 
   return (
     <>
-      <Container className="registration"></Container>
-      <Row>
-        <Col lg={6} md={8} sm={10} className="cardRegistration">
-          <CardGroup>
-            <Card Card border="light">
-              <Card.Body className="register_container">
-                <Card.Title>
-                  <img src={horntrax} alt="logo" />
-                </Card.Title>
+      <Container className="registration">
+        <Row>
+          <Col lg={12} className="cardRegistration">
+            <CardGroup>
+              <Card
+                Card
+                border="light"
+                style={{ width: "20rem", marginTop: "15px" }}
+              >
+                <Card.Body className="register_container">
+                  <Card.Title className="logo">
+                    <img src={horntrax} alt="logo" />
+                  </Card.Title>
 
-                <Card.Title className="logPrompt">
-                  Please register a new user or <Link to="/login">Login</Link>
-                </Card.Title>
+                  <Card.Title className="logPrompt">
+                    Please register a new user or <Link to="/login">Login</Link>
+                  </Card.Title>
 
-                <Form>
-                  <Form.Group
-                    controlId="formUsername"
-                    className="reg-form-inputs"
-                  >
-                    <Form.Label>Username</Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="atleast 3 characters long"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                    />
-                    {usernameErr && (
-                      <p style={{ color: "red" }} className="font-italic">
-                        {usernameErr}
-                      </p>
-                    )}
-                  </Form.Group>
-
-                  <Form.Group
-                    controlId="formPassword"
-                    className="reg-form-inputs"
-                  >
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                      type="password"
-                      placeholder="atleast 5 characters long"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                    {passwordErr && (
-                      <p style={{ color: "red" }} className="font-italic">
-                        {passwordErr}
-                      </p>
-                    )}
-                  </Form.Group>
-
-                  <Form.Group controlId="Email" className="reg-form-inputs">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="must be a unique email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                    {emailErr && (
-                      <p style={{ color: "red" }} className="font-italic">
-                        {emailErr}
-                      </p>
-                    )}
-                  </Form.Group>
-                  <div className="registerButton">
-                    {" "}
-                    <Button
-                      variant="primary"
-                      type="submit"
-                      onClick={handleSubmit}
+                  <Form>
+                    <Form.Group
+                      controlId="formUsername"
+                      className="reg-form-inputs"
                     >
-                      Submit
-                    </Button>
-                  </div>
+                      <Form.Label>Username</Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="Atleast 3 characters long"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                      />
+                      {usernameErr && (
+                        <p style={{ color: "red" }} className="font-italic">
+                          {usernameErr}
+                        </p>
+                      )}
+                    </Form.Group>
 
-                  <p></p>
-                </Form>
-              </Card.Body>
-            </Card>
-          </CardGroup>
-        </Col>
-      </Row>
+                    <Form.Group
+                      controlId="formPassword"
+                      className="reg-form-inputs"
+                    >
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control
+                        type="password"
+                        placeholder="Atleast 5 characters long"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                      />
+                      {passwordErr && (
+                        <p style={{ color: "red" }} className="font-italic">
+                          {passwordErr}
+                        </p>
+                      )}
+                    </Form.Group>
+
+                    <Form.Group controlId="Email" className="reg-form-inputs">
+                      <Form.Label>Email</Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="must be a unique email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                      {emailErr && (
+                        <p style={{ color: "red" }} className="font-italic">
+                          {emailErr}
+                        </p>
+                      )}
+                    </Form.Group>
+                    <div className="registerButton">
+                      {" "}
+                      <Button
+                        className="button"
+                        variant="primary"
+                        type="submit"
+                        onClick={handleSubmit}
+                      >
+                        Submit
+                      </Button>
+                    </div>
+
+                    <p></p>
+                  </Form>
+                </Card.Body>
+              </Card>
+            </CardGroup>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
