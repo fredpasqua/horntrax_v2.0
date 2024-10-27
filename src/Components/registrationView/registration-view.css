@@ -10,7 +10,7 @@
 .cardRegistration {
     margin-left: auto;
     margin-right: auto;
-    width: 25rem;
+
 }
 
 .register_container {
@@ -18,11 +18,12 @@
     
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 .register_container img {
     text-align: center;
     height: 200px;
+;
 }
 
 .registerButton {
@@ -47,3 +48,14 @@
     margin: 20px;
 }
 
+.logPrompt {
+    color: grey !important;
+}
+
+
+
+.form-label {
+    font-weight: 100;
+    font-size: 18px;
+    padding-top: 10px;
+}

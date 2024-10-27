@@ -7,10 +7,10 @@ export default function DropDownLocations({ data, action, selector }) {
     action(e);
   };
 
-  //create a variable to hold object to inject into departments array for clearing the selectedDepartment sort
+  //create a variable to hold object to inject into locations array for clearing the selectedLocation sort
   let reset = { value: "", label: "All Locations" };
 
-  //creates departments variable for use by react.select component
+  //creates location variable for use by react.select component
   let types = data
     .map((item) => ({
       value: item.location,
