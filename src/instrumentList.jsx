@@ -186,33 +186,36 @@ function InstrumentList() {
           <div className="top-container">
             <AddLoaner forceUpdate={forceUpdate} user={user} />
             <div className="searchBar">
-              <div className="searchBarAndButton">
-                <input
-                  className="inputSearchBox"
-                  onChange={(event) => setQuery(event.target.value)}
-                  value={query}
-                  placeholder="search anything..."
-                ></input>
-                <div className="clearButton">
-                  <Button onClick={() => clear()}>X</Button>
+              <div className="searchBarTotal">
+                <div className="searchBarAndButton">
+                  <input
+                    className="inputSearchBox"
+                    onChange={(event) => setQuery(event.target.value)}
+                    value={query}
+                    placeholder="search anything..."
+                  ></input>
+                  <div className="clearButton">
+                    <Button onClick={() => clear()}>X</Button>
+                  </div>
                 </div>
+                <div className="dropDownContainer">
+                  <DropDownLocations
+                    data={instruments}
+                    action={updateSelectedLocation}
+                    selector={{ value: "location" }}
+                  />
+                  <DropDown
+                    data={instruments}
+                    action={updateSelectedType}
+                    selector={{ value: "type" }}
+                    styles={{ backgroundColorStyle: "neutral150" }}
+                  />
+                </div>
+                <p className="instrumentCounter">
+                  Total Instruments: {filteredInstruments.length}
+                </p>
               </div>
-              <div className="dropDownContainer">
-                <DropDownLocations
-                  data={instruments}
-                  action={updateSelectedLocation}
-                  selector={{ value: "location" }}
-                />
-                <DropDown
-                  data={instruments}
-                  action={updateSelectedType}
-                  selector={{ value: "type" }}
-                  styles={{ backgroundColorStyle: "neutral150" }}
-                />
-              </div>
-              <p className="instrumentCounter">
-                Total Instruments: {filteredInstruments.length}
-              </p>
+
               <Scanner handleScan={handleScan}></Scanner>
             </div>
           </div>

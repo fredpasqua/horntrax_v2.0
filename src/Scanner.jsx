@@ -1,27 +1,52 @@
 import React from "react";
 import { useState } from "react";
 import { BarcodeScanner } from "@thewirv/react-barcode-scanner";
-
+import "./Scanner.css";
 export default function Scanner({ handleScan }) {
   const [data, setData] = useState([]);
   const [doScan, setDoScan] = useState(false);
+  const [viewer, setViewer] = useState("none");
   return (
     <>
-      <BarcodeScanner
-        doScan={doScan}
-        onSuccess={(text) => setData(text)}
-        onError={(error) => {
-          if (error) {
-            console.error(error.message);
-          }
-        }}
-        onLoad={() => console.log("Video feed has loaded!")}
-        containerStyle={{ maxWidth: "10%", minWidth: "200px" }}
-      />
-      <button onClick={() => setDoScan(true)}>SCAN</button>
-      <button onClick={() => handleScan(data) && setDoScan(false)}>
-        Find This: {data}
-      </button>
+      <div className="scannerWrapper">
+        <BarcodeScanner
+          doScan={doScan}
+          onSuccess={(text) => {
+            setViewer("inline-block");
+            setData(text);
+            setDoScan(false);
+          }}
+          onError={(error) => {
+            if (error) {
+              console.error(error.message);
+            }
+          }}
+          onLoad={() => console.log("Video feed has loaded!")}
+          containerStyle={{ maxWidth: "10%", minWidth: "200px" }}
+        />
+        <div className="scanner">
+          <button
+            className="scanButtons"
+            onClick={() => {
+              setDoScan(!doScan);
+            }}
+          >
+            {" "}
+            Toggle Scanner
+          </button>
+          <button
+            // style={{ display: viewer }}
+            className="scanButtons"
+            onClick={() => {
+              handleScan(data);
+              setViewer("none");
+              setDoScan(false);
+            }}
+          >
+            SEARCH BARCODE: {data}
+          </button>
+        </div>
+      </div>
     </>
   );
 }
