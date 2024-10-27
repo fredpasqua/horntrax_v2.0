@@ -76,7 +76,7 @@ export function LoginView(props) {
                   <Card.Title className="logo">
                     <img src={horntrax} alt="logo" />
                   </Card.Title>
-                  <div className="welcome">Welcome</div>
+
                   <Card.Title className="logPrompt">
                     Please Login or <Link to="/register">Register</Link>
                   </Card.Title>
