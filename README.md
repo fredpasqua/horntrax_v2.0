@@ -1,13 +1,15 @@
 # Horntrax v2.0
 ## _Track musical instrument inventory_
 
-Horntrax solves the problem of keeping track of the location of musical instruments that are provided to students or clients on a "on loan" basisl
+Horntrax solves the problem of keeping track of the location of musical instruments that are provided to students or clients on a "on loan" basis. 
 
 ## Features
 
 - Users are able to track inventory that they enter into the app.
 - Users are able to sort the inventory they have entered by location or type of instrument as well as search the entire inventory quickly and easily.
 - Users can update a record or delete it.
+- Users can scan a QR code to search for an instrument.
+- Users can get new QR codes to print to tag their inventory items IRL. 
 
 ## Tech
 
