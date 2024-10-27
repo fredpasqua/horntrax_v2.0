@@ -32,10 +32,10 @@ export default function Scanner({ handleScan }) {
             }}
           >
             {" "}
-            Toggle Scanner
+            Scanner ON/OFF
           </button>
           <button
-            // style={{ display: viewer }}
+            style={{ display: viewer }}
             className="scanButtons"
             onClick={() => {
               handleScan(data);
