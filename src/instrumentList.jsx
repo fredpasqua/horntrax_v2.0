@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import axios from "axios";
 import {
   CloseButton,
@@ -182,85 +182,90 @@ function InstrumentList() {
       {user.length === 0 ? (
         <LoginView setUser={setUser} forceUpdate={forceUpdate} />
       ) : (
-        <div className="loanersViewContainer">
-          <Navigate onLoggedOut={onLoggedOut} user={user} />
+        <Suspense fallback={<p>Loading....</p>}>
+          <div className="loanersViewContainer">
+            <Navigate onLoggedOut={onLoggedOut} user={user} />
 
-          <div className="top-container">
-            <AddLoaner forceUpdate={forceUpdate} user={user} />
-            <div className="searchBar">
-              <div className="searchBarTotal">
-                <div className="searchBarAndButton">
-                  <input
-                    className="inputSearchBox"
-                    onChange={(event) => setQuery(event.target.value)}
-                    value={query}
-                    placeholder="search anything..."
-                  ></input>
-                  <div className="clearButton">
-                    <Button onClick={() => clear()}>X</Button>
+            <div className="top-container">
+              <AddLoaner forceUpdate={forceUpdate} user={user} />
+              <div className="searchBar">
+                <div className="searchBarTotal">
+                  <div className="searchBarAndButton">
+                    <input
+                      className="inputSearchBox"
+                      onChange={(event) => setQuery(event.target.value)}
+                      value={query}
+                      placeholder="search anything..."
+                    ></input>
+                    <div className="clearButton">
+                      <Button onClick={() => clear()}>X</Button>
+                    </div>
                   </div>
+                  <div className="dropDownContainer">
+                    <DropDownLocations
+                      data={instruments}
+                      action={updateSelectedLocation}
+                      selector={{ value: "location" }}
+                    />
+                    <DropDown
+                      data={instruments}
+                      action={updateSelectedType}
+                      selector={{ value: "type" }}
+                      styles={{ backgroundColorStyle: "neutral150" }}
+                    />
+                  </div>
+                  <p className="instrumentCounter">
+                    Total Instruments: {filteredInstruments.length}
+                  </p>
                 </div>
-                <div className="dropDownContainer">
-                  <DropDownLocations
-                    data={instruments}
-                    action={updateSelectedLocation}
-                    selector={{ value: "location" }}
-                  />
-                  <DropDown
-                    data={instruments}
-                    action={updateSelectedType}
-                    selector={{ value: "type" }}
-                    styles={{ backgroundColorStyle: "neutral150" }}
-                  />
-                </div>
-                <p className="instrumentCounter">
-                  Total Instruments: {filteredInstruments.length}
-                </p>
+
+                <Scanner handleScan={handleScan}></Scanner>
               </div>
-
-              <Scanner handleScan={handleScan}></Scanner>
             </div>
-          </div>
-          <Table variant="light" striped bordered hover className="table">
-            <thead>
-              <tr>
-                <th>Type</th>
-                <th>Location</th> <th>Serial</th>
-                <th>Edit</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredInstruments?.map((item) => (
-                <tr key={item.barcode}>
-                  <td className="table-style">{item.type}</td>
-                  <td className="table-style">{item.location}</td>
-                  <td className="table-style">{item.serial}</td>
-
-                  <td>
-                    <Button
-                      className="btn-instrument btn-primary select"
-                      onClick={() => {
-                        setShowModal(true);
-                        setSelectedInstrument(item);
-                        setFormData({
-                          type: item.type,
-                          brand: item.brand,
-                          serial: item.serial,
-                          barcode: item.barcode,
-                          location: item.location,
-                          dateLastServiced: item.dateLastServiced.slice(0, 10),
-                        });
-                      }}
-                    >
-                      <PencilSquare width="20" height="20" />
-                    </Button>
-                  </td>
+            <Table variant="light" striped bordered hover className="table">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Location</th> <th>Serial</th>
+                  <th>Edit</th>
                 </tr>
-              ))}
-            </tbody>
-          </Table>
-          <QrCodePrintScreen filteredInstruments={filteredInstruments} />
-        </div>
+              </thead>
+              <tbody>
+                {filteredInstruments?.map((item) => (
+                  <tr key={item.barcode}>
+                    <td className="table-style">{item.type}</td>
+                    <td className="table-style">{item.location}</td>
+                    <td className="table-style">{item.serial}</td>
+
+                    <td>
+                      <Button
+                        className="btn-instrument btn-primary select"
+                        onClick={() => {
+                          setShowModal(true);
+                          setSelectedInstrument(item);
+                          setFormData({
+                            type: item.type,
+                            brand: item.brand,
+                            serial: item.serial,
+                            barcode: item.barcode,
+                            location: item.location,
+                            dateLastServiced: item.dateLastServiced.slice(
+                              0,
+                              10
+                            ),
+                          });
+                        }}
+                      >
+                        <PencilSquare width="20" height="20" />
+                      </Button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+            <QrCodePrintScreen filteredInstruments={filteredInstruments} />
+          </div>
+        </Suspense>
       )}
       {/* <div className="qrCodeContainer">
         {filteredInstruments?.map((item) => (
