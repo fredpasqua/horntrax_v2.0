@@ -226,7 +226,8 @@ function InstrumentList() {
               <thead>
                 <tr>
                   <th>Type</th>
-                  <th>Location</th> <th>Serial</th>
+                  <th>Location</th>
+                  <th>Serial</th>
                   <th>Edit</th>
                 </tr>
               </thead>

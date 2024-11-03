@@ -69,7 +69,6 @@ export function LoginView(props) {
           <Col lg={12}>
             <CardGroup>
               <Card
-                Card
                 border="light"
                 style={{ width: "20rem", marginTop: "50px" }}
               >
