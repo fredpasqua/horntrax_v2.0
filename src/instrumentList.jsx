@@ -64,6 +64,7 @@ function InstrumentList() {
 
   const onRequestClose = () => {
     setShowModal(false);
+    clear();
   };
 
   const forceUpdate = () => {
