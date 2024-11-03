@@ -17,7 +17,6 @@ import DropDownLocations from "./selectLocation";
 import { LoginView } from "./Components/loginView/loginView";
 import Navigate from "./Components/navBar/navbar.js";
 import { PencilSquare } from "react-bootstrap-icons";
-import QRcodeGenerator from "./QRcodeGenerator.jsx";
 import QrCodePrintScreen from "./Components/qrCodePrintScreen/qrCodePrintScreen.jsx";
 
 function InstrumentList() {

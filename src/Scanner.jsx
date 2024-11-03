@@ -5,14 +5,14 @@ import "./Scanner.css";
 export default function Scanner({ handleScan }) {
   const [data, setData] = useState([]);
   const [doScan, setDoScan] = useState(false);
-  const [viewer, setViewer] = useState("none");
+  const [isVisible, setIsVisible] = useState("none");
   return (
     <>
       <div className="scannerWrapper">
         <BarcodeScanner
           doScan={doScan}
           onSuccess={(text) => {
-            setViewer("inline-block");
+            setIsVisible("inline-block");
             setData(text);
             setDoScan(false);
           }}
@@ -35,11 +35,11 @@ export default function Scanner({ handleScan }) {
             Scanner ON/OFF
           </button>
           <button
-            style={{ display: viewer }}
+            style={{ display: isVisible }}
             className="scanButtons"
             onClick={() => {
               handleScan(data);
-              setViewer("none");
+              setIsVisible("none");
               setDoScan(false);
             }}
           >

@@ -57,6 +57,7 @@ export function LoginView(props) {
           alert(
             "The provided username does not exist or the password was entered incorrectly."
           );
+          console.log(e);
         });
     }
   };
