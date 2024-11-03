@@ -4,7 +4,9 @@ body {
   padding: 0px;
     margin: 0px;
 }
-
+div * {
+  border: 1px red solid;
+}
 
 .flexer {
   display: flex;
@@ -20,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 56px;
-  width: 100vw !important;
+  min-width: 393px;
 }
 
 .btn {
@@ -90,6 +92,7 @@ h1 {
   justify-content: space-around;
   align-items: center;
   width: 100vw;
+  min-width: 393px;
   background-color: lightgray;
   border: 2px solid rgb(20, 116, 164);
 }
@@ -147,6 +150,9 @@ h1 {
   padding: 10px;
 }
 
+.table {
+  min-width: 393px;
+}
 /*styling for update modal */
 
 .useInfo {
