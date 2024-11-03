@@ -92,7 +92,7 @@ function InstrumentList() {
   const handleScan = (code) => {
     setCode(code);
     setQuery(code);
-  };
+  }
 
   //creates a list of  instruments prefiltered by selectedType state
   let preFilteredInstruments = [];
