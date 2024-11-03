@@ -182,46 +182,46 @@ function InstrumentList() {
       {user.length === 0 ? (
         <LoginView setUser={setUser} forceUpdate={forceUpdate} />
       ) : (
-        <Suspense fallback={<p>Loading....</p>}>
-          <div className="loanersViewContainer">
-            <Navigate onLoggedOut={onLoggedOut} user={user} />
+        <div className="loanersViewContainer">
+          <Navigate onLoggedOut={onLoggedOut} user={user} />
 
-            <div className="top-container">
-              <AddLoaner forceUpdate={forceUpdate} user={user} />
-              <div className="searchBar">
-                <div className="searchBarTotal">
-                  <div className="searchBarAndButton">
-                    <input
-                      className="inputSearchBox"
-                      onChange={(event) => setQuery(event.target.value)}
-                      value={query}
-                      placeholder="search anything..."
-                    ></input>
-                    <div className="clearButton">
-                      <Button onClick={() => clear()}>X</Button>
-                    </div>
+          <div className="top-container">
+            <AddLoaner forceUpdate={forceUpdate} user={user} />
+            <div className="searchBar">
+              <div className="searchBarTotal">
+                <div className="searchBarAndButton">
+                  <input
+                    className="inputSearchBox"
+                    onChange={(event) => setQuery(event.target.value)}
+                    value={query}
+                    placeholder="search anything..."
+                  ></input>
+                  <div className="clearButton">
+                    <Button onClick={() => clear()}>X</Button>
                   </div>
-                  <div className="dropDownContainer">
-                    <DropDownLocations
-                      data={instruments}
-                      action={updateSelectedLocation}
-                      selector={{ value: "location" }}
-                    />
-                    <DropDown
-                      data={instruments}
-                      action={updateSelectedType}
-                      selector={{ value: "type" }}
-                      styles={{ backgroundColorStyle: "neutral150" }}
-                    />
-                  </div>
-                  <p className="instrumentCounter">
-                    Total Instruments: {filteredInstruments.length}
-                  </p>
                 </div>
-
-                <Scanner handleScan={handleScan}></Scanner>
+                <div className="dropDownContainer">
+                  <DropDownLocations
+                    data={instruments}
+                    action={updateSelectedLocation}
+                    selector={{ value: "location" }}
+                  />
+                  <DropDown
+                    data={instruments}
+                    action={updateSelectedType}
+                    selector={{ value: "type" }}
+                    styles={{ backgroundColorStyle: "neutral150" }}
+                  />
+                </div>
+                <p className="instrumentCounter">
+                  Total Instruments: {filteredInstruments.length}
+                </p>
               </div>
+
+              <Scanner handleScan={handleScan}></Scanner>
             </div>
+          </div>
+          <Suspense fallback={<p>Loading....</p>}>
             <Table variant="light" striped bordered hover className="table">
               <thead>
                 <tr>
@@ -232,7 +232,7 @@ function InstrumentList() {
                 </tr>
               </thead>
               <tbody>
-                {filteredInstruments?.map((item) => (
+                {filteredInstruments.map((item) => (
                   <tr key={item.barcode}>
                     <td className="table-style">{item.type}</td>
                     <td className="table-style">{item.location}</td>
@@ -264,9 +264,9 @@ function InstrumentList() {
                 ))}
               </tbody>
             </Table>
-            <QrCodePrintScreen filteredInstruments={filteredInstruments} />
-          </div>
-        </Suspense>
+          </Suspense>
+          <QrCodePrintScreen filteredInstruments={filteredInstruments} />
+        </div>
       )}
       {/* <div className="qrCodeContainer">
         {filteredInstruments?.map((item) => (
@@ -307,6 +307,18 @@ function InstrumentList() {
               <h2 className="updateFormTitle">{formData.type}</h2>
 
               <InputGroup className="modal-text">
+                <Form.Label>Instrument Type: </Form.Label>
+                <Form.Control
+                  style={{ width: "100%", borderRadius: "5px" }}
+                  type="text"
+                  value={formData.type}
+                  onChange={handleChange}
+                  name="type"
+                  placeholder={formData.type}
+                  aria-label="Update Type of Instrument"
+                  aria-describedby="basic-addon2"
+                ></Form.Control>
+                <br></br>
                 <Form.Label>Brand: </Form.Label>
                 <Form.Control
                   style={{ width: "100%", borderRadius: "5px" }}
