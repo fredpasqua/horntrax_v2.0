@@ -5,11 +5,12 @@
    justify-content: center;
    align-items: center;
 }
-  
+
+
   .loaner-input {
     width: 100%;
     padding: 12px;
-    border: 1px solid rgb(174, 174, 174);
+    border: 1px solid rgb(154, 154, 154);
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
@@ -17,7 +18,7 @@
   }
 
   .loaner-submit-button {
-    background-color: #046eab;
+    background-color: coral;
     color: white;
     padding: 10px;
     border: none;
@@ -27,6 +28,13 @@
     font-weight: bold;
     width: 50%;
     margin-bottom: 10px;
+    filter: drop-shadow(-1px 9px 4px #b99595);
+    }
+    
+    .loaner-submit-button:active {
+      transition: .2s;
+      filter: none;
+      transition: .2s;
   }
   label {
     width: 75%;
@@ -38,18 +46,22 @@
 
 
 .accordion-button.collapsed{
-  /* background-color: rgb(234, 234, 234) !important; */
+background-color: lightcoral(234, 234, 234) !important;
   background-color:lightcoral;
   font-size: 20px;
 }
 
 .accordion-button:focus {
   box-shadow: none;
+  background-color: lightcoral;
 }
 
 .accordion-button:not(.collapsed) {
-  color: #107be5;
+  background-color: rgb(203, 177, 177);
   font-size: 20px;
+}
+.accordion-button {
+  background-color: lightcoral !important;
 }
 
 
