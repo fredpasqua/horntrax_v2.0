@@ -207,6 +207,7 @@ function InstrumentList() {
                     selector={{ value: "location" }}
                   />
                   <DropDown
+                    className="dropDownContainer"
                     data={instruments}
                     action={updateSelectedType}
                     selector={{ value: "type" }}
