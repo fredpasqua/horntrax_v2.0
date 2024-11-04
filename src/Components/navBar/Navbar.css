@@ -10,3 +10,7 @@
         right: auto;
         margin: 0px;
 }
+.link {
+    position: relative;
+    left: 10px;
+}
