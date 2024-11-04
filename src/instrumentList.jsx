@@ -53,7 +53,19 @@ function InstrumentList() {
         .get(
           `https://horntrax-api.herokuapp.com/loaners/useridfind/${user._id}`
         )
-        .then((res) => setInstruments(res.data));
+        .then((res) =>
+          setInstruments(
+            res.data.sort((a, b) => {
+              if (a.type < b.type) {
+                return -1;
+              }
+              if (a.type > b.type) {
+                return 1;
+              }
+              return 0;
+            })
+          )
+        );
     }
     getLoaners();
   }, [updater, user._id]);
