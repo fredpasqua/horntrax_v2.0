@@ -96,7 +96,7 @@ h1 {
     align-items: center;
   width: 100vw;
   min-width: 393px;
-  background-color: #3eb489e3;
+  background-color: #76b5c5cb;
   border: 2px solid rgb(20, 116, 164);
   height: fit-content
 
@@ -122,9 +122,17 @@ h1 {
 
 
 .instrumentCounter {
-  font-weight: bold;
+  font-weight: bolder;
   margin-right: 10px;
   padding: 10px;
+  background-color: rgba(212, 138, 35, 0.663);
+    opacity: 100%;
+    border-radius: 4px;
+    /* backdrop-filter: blur(20px); */
+  }
+  
+  .ReactModal__Content--after-openrgba {
+    background-color: rgba(226, 58, 29, 0)
 }
 
 .searchBar Input {
@@ -176,6 +184,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 255, 255, 0);
 }
 .updateFormTitle {
   font-size: xx-large;
