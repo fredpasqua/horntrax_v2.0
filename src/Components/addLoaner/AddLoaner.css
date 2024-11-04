@@ -46,14 +46,14 @@
 
 
 .accordion-button.collapsed{
-background-color: lightcoral(234, 234, 234) !important;
-  background-color:lightcoral;
+background-color: lightblue(234, 234, 234) !important;
+  background-color:lightblue;
   font-size: 20px;
 }
 
 .accordion-button:focus {
   box-shadow: none;
-  background-color: lightcoral;
+  background-color: lightblue;
 }
 
 .accordion-button:not(.collapsed) {
@@ -61,7 +61,7 @@ background-color: lightcoral(234, 234, 234) !important;
   font-size: 20px;
 }
 .accordion-button {
-  background-color: lightcoral !important;
+  background-color: lightblue !important;
 }
 
 
