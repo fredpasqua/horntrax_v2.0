@@ -188,8 +188,8 @@ function InstrumentList() {
           <div className="top-container">
             <AddLoaner forceUpdate={forceUpdate} user={user} />
             <div className="searchBar">
-              <div className="searchBarTotal">
-                <div className="searchBarAndButton">
+              <div className="searchBarTotal ">
+                <div className="searchBarAndButton ">
                   <input
                     className="inputSearchBox"
                     onChange={(event) => setQuery(event.target.value)}
