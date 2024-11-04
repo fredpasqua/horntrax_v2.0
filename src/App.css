@@ -126,6 +126,9 @@ h1 {
     z-index: 1;
     }
     
+.instrumentCounter {
+  font-size: 22px !important;
+}
 
 .dropdown-menu {
   display: flex;
@@ -255,7 +258,8 @@ Button.select {
   .table-style {
 
     margin: 5px !important;
-    font-size: smaller !important;
+    font-size: medium !important;
+      overflow: hidden;
   }
 
   .dropdown {

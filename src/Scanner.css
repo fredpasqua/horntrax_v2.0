@@ -21,12 +21,15 @@
 }
 
 .scanButtons {
-    background-color: lightblue;
+    background-color: coral;
     border-radius: 5px;
     width: 200px;
     height: fit-content !important;
         padding: 5px;
         filter: drop-shadow(-1px 9px 10px #515151);
+        color: white;
+            font-weight: bold;
+            border: none;
 
 }
 .scanButtons:active {
