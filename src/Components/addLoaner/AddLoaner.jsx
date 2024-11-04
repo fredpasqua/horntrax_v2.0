@@ -114,7 +114,10 @@ const AddLoaner = (props) => {
                 />
               </label>
               <label>
-                Barcode
+                Barcode{" "}
+                <span className="helperText">
+                  (Unique 6 digit number, ex. 764898)
+                </span>
                 <input
                   className="loaner-input"
                   type="number"
