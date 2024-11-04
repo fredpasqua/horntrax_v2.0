@@ -17,7 +17,7 @@
     align-items: center;
     max-width: 393px;
     top: 15px;
-        filter: drop-shadow(-1px 9px 4px #515151);
+    filter: drop-shadow(-1px 5px 4px #515151);
 }
 
 .scanButtons {
@@ -26,5 +26,10 @@
     width: 200px;
     height: fit-content !important;
         padding: 5px;
+        filter: drop-shadow(-1px 9px 10px #515151);
 
+}
+.scanButtons:active {
+    filter: none;
+    transition: .1s;
 }

@@ -18,7 +18,7 @@ export default function Scanner({ handleScan }) {
           }}
           onError={(error) => {
             if (error) {
-              console.error(error.message);
+              alert(error.message);
             }
           }}
           onLoad={() => console.log("Video feed has loaded!")}
