@@ -309,16 +309,17 @@ function InstrumentList() {
             className="modalCloseButton"
             onClick={() => onRequestClose()}
             style={{
-              height: "40px",
-              width: "40px",
-              color: "#3794ca",
+              position: "relative",
+              height: "45px",
+              width: "45px",
+              color: "black",
               marginLeft: "92%",
+              top: "10px",
+              fontWeight: "bolder",
             }}
           ></CloseButton>
           <div>
             <div className="useInfo">
-              <h2 className="updateFormTitle">{formData.type}</h2>
-
               <InputGroup className="modal-text">
                 <Form.Label>Instrument Type: </Form.Label>
                 <Form.Control
