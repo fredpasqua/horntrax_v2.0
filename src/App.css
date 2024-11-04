@@ -7,13 +7,13 @@ body {
 }
 
 .brand {
-  padding: 3px;
-  color: Lightcoral !important;
+  padding: 4px;
+    color: coral !important;
   font-size: larger;
   font-weight: bolder !important;
     text-decoration: None;
     position: relative;
-    top: -4px;
+    top: 0px;
     border: 1px Lightcoral solid;
 
 }
