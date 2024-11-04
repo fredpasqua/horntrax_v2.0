@@ -2,31 +2,33 @@ body {
   background-image: url(./Images/music.jpg);
   opacity: 1;
   padding: 0px;
-    margin: 0px;
-    
+  margin: 0px;
 }
 
 .brand {
   padding: 4px;
-    color: coral !important;
+  color: coral !important;
   font-size: larger;
   font-weight: bolder !important;
-    text-decoration: None;
+  text-decoration: None;
     position: relative;
     top: 0px;
     border: 1px Lightcoral solid;
 
 }
+
 .flexer {
   display: flex;
   flex-direction: column;
   align-items: center
 }
+
 .loanersViewContainer {
   display: flex;
   flex-direction: column;
   width: 100vw;
 }
+
 .top-container {
   display: flex;
   flex-direction: column;
@@ -37,7 +39,7 @@ body {
 .btn {
   font-size: calc(10px + 2vmin);
   margin: 10px;
-    position: relative;
+  position: relative;
     top: 10px;
   background-color: #046eab;
   filter: drop-shadow(-1px 9px 10px #545454);
@@ -46,19 +48,23 @@ body {
 .btn:hover {
   background-color: #03669f !important;
 }
+
 .btn-delete {
   width: 50px !important;
   background-color: #046eab !important;
 }
+
 .btn-delete:hover {
   width: 50px !important;
   background-color: rgb(253, 0, 0) !important;
 }
+
 .btn-instrument {
   width: 175px;
   font-size: 24px !important;
   top: 0px;
 }
+
 .btn:active {
   filter: none;
 }
@@ -67,12 +73,14 @@ body {
   width: 250px;
   font-size: 24px !important;
 }
+
 .deleteButton {
   width: 250px;
   font-size: 24px !important;
-  background-color: rgb(171, 0, 0) !important ;
+  background-color: rgb(171, 0, 0) !important;
   margin-top: 20px;
 }
+
 .deleteButton:hover {
   background-color: red !important;
 }
@@ -96,23 +104,24 @@ h1 {
   min-width: 350px;
   height: 60px;
   flex-direction: row;
-    justify-content: center;
+  justify-content: center;
 
 }
+
 .searchBar {
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
   flex-direction: row;
   justify-content: center;
-    align-items: center;
+  align-items: center;
   width: 100vw;
   min-width: 393px;
   background-color: #76b5c5cb;
   border: 2px solid rgb(20, 116, 164);
   height: fit-content
-
 }
+
 .searchBarTotal {
   background-color: rgba(62, 110, 193, 0.186);
   display: flex;
@@ -120,12 +129,11 @@ h1 {
   align-items: center;
   padding: 5px;
   justify-content: space-around;
-    border: 2px grey solid;
+  border: 2px grey solid;
     border-radius: 4px;
     filter: drop-shadow(-1px 9px 4px #515151);
     z-index: 1;
-    }
-    
+}
 .instrumentCounter {
   font-size: 22px !important;
 }
@@ -135,9 +143,8 @@ h1 {
 }
 
 
-  
-  .ReactModal__Content--after-openrgba {
-    background-color: rgba(226, 58, 29, 0)
+.ReactModal__Content--after-openrgba {
+  background-color: rgba(226, 58, 29, 0)
 }
 
 .searchBar Input {
@@ -145,25 +152,27 @@ h1 {
   align-self: center;
   border-radius: 5px;
   font-size: 16px;
-  }
-  
-  .inputSearchBox {
-    position: relative;
-    height: 40px !important;
-    margin-top: 15px;
-    padding: 10px;
+}
+
+.inputSearchBox {
+  position: relative;
+  height: 40px !important;
+  margin-top: 15px;
+  padding: 10px;
   width: 70%;
 }
+
 .searchBar Button {
   height: 38px;
-  
+
 }
+
 .dropDownContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   max-width: 300px;
-    margin: 10px !important;
+  margin: 10px !important;
     position: relative;
     left: -5px;
 }
@@ -172,7 +181,7 @@ h1 {
   border: solid 2px rgb(67, 67, 67);
   margin: 3px;
   border-radius: 5px;
-  
+
 }
 
 
@@ -184,6 +193,7 @@ h1 {
 .table {
   min-width: 393px;
 }
+
 /*styling for update modal */
 
 .useInfo {
@@ -193,16 +203,19 @@ h1 {
   justify-content: center;
   background-color: rgba(0, 255, 255, 0);
 }
+
 .updateFormTitle {
   font-size: xx-large;
   text-align: center;
   margin: 10px;
 }
+
 .modal-text {
   font-size: 20px;
   max-width: 350px;
   overflow: hidden;
 }
+
 .updateFormButtonsContainer {
   display: flex;
   flex-direction: column;
@@ -238,12 +251,14 @@ Button.select {
   position: relative;
   top: -3px;
 }
+
 .scanner {
   display: flex;
   width: 400px;
   height: 400px;
   background-color: white;
 }
+
 .scannerWrapper {
   margin: 10px !important;
 }
@@ -254,27 +269,45 @@ Button.select {
   bottom: 300px;
   width: 80vw;
 }
+
 @media (max-width: 600px) {
   .table-style {
 
     margin: 5px !important;
     font-size: medium !important;
-      overflow: hidden;
+    overflow: hidden;
   }
 
   .dropdown {
     margin-right: 5px !important;
     font-size: smaller !important;
+}
+}
+.ReactModal__Content {
+  inset: 10px !important;
+  height: auto;
+  top: 25px !important;
 
-
-  }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .ReactModal__Content {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  inset: 10px !important;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  height: auto;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  top: 25px !important;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
 }
 .button {
-  filter: drop-shadow(-1px 9px 10px #717171a0);
+  padding: 10px;
+  margin: 10px;
+  background-color: coral !important;
+  border: none;
+  font-weight: bold;
+  box-shadow: rgba(55, 50, 50, 0.684) 0px 5px 10px;
+}
+
+.button:focus {
+  background-color: rgb(251, 115, 66) !important;
+  box-shadow: rgba(55, 50, 50, 0.684) 0px 5px 10px;
+}
+
+.button:hover {
+  background-color: rgb(251, 115, 66) !important;
+  box-shadow: rgba(55, 50, 50, 0.684) 0px 5px 10px;
+}
+.button:active {
+  background-color: rgb(251, 115, 66) !important;
+  box-shadow: none;
 }

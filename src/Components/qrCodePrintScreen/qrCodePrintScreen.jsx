@@ -7,7 +7,7 @@ function QrCodePrintScreen({ filteredInstruments }) {
     <>
       <div>
         <button
-          style={{ width: "100px" }}
+          className="button"
           onClick={() => {
             setIsVisible(!isVisible);
           }}
