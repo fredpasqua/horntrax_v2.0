@@ -8,6 +8,11 @@ body {
  * {
 }
 
+.brand {
+  color: Lightcoral !important;
+  font-size: larger;
+
+}
 .flexer {
   display: flex;
   flex-direction: column;
