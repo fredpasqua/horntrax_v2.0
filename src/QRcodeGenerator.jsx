@@ -9,9 +9,8 @@ function QRcodeGenerator({ barcode }) {
         size={256}
         style={{
           height: "100px",
-          maxWidth: "100px",
+
           width: "100px",
-          margin: "20px",
         }}
         value={barcode.toString()}
         viewBox={`0 0 256 256`}
