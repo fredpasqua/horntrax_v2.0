@@ -7,7 +7,10 @@ function QrCodePrintScreen({ filteredInstruments }) {
   async function handleOnClick() {
     const html2pdf = await require("html2pdf.js");
     const element = document.querySelector("#qrCodeScreen");
-    html2pdf(element, {});
+    const opt = {
+      filename: "HornTraxQRCodes.pdf",
+    };
+    html2pdf(element, opt);
   }
   return (
     <>
@@ -22,11 +25,18 @@ function QrCodePrintScreen({ filteredInstruments }) {
         </button>
         <button
           className="button"
+          style={
+            isVisible === false
+              ? { display: "none" }
+              : {
+                  display: "inline-block",
+                }
+          }
           onClick={() => {
             handleOnClick();
           }}
         >
-          GET A PDF
+          QR Codes to .PDF
         </button>
       </div>
 
