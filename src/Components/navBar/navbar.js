@@ -4,8 +4,8 @@ import Navbar from "react-bootstrap/Navbar";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 function Navigate(props) {
-  // const user = props.user.username;
-let user = "long ass crazy name";
+const user = props.user.username;
+
 return (
   <div className="navstyle">
     <Container>
