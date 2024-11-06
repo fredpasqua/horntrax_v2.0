@@ -311,3 +311,7 @@ Button.select {
   background-color: rgb(251, 115, 66) !important;
   box-shadow: none;
 }
+.html2canvas-container {
+  width: 3000px;
+  height: 3000px;
+}
