@@ -1,7 +1,4 @@
 .welcomeMessage {
-    margin-top: auto;
-        margin-bottom: auto;
-}
-.navbar-container {
-    width: 100vw !important;
+margin-right: 10px;
+    max-width: 30vw;
 }
