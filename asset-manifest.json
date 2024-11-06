@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/horntrax_v2.0/static/css/main.19f08bca.css",
-    "main.js": "/horntrax_v2.0/static/js/main.4425f7db.js",
+    "main.css": "/horntrax_v2.0/static/css/main.bfedaec3.css",
+    "main.js": "/horntrax_v2.0/static/js/main.2a231790.js",
     "static/js/703.fb39196d.chunk.js": "/horntrax_v2.0/static/js/703.fb39196d.chunk.js",
     "static/js/198.6fa572ce.chunk.js": "/horntrax_v2.0/static/js/198.6fa572ce.chunk.js",
     "static/media/music.jpg": "/horntrax_v2.0/static/media/music.8341c78eefdf0b1344ec.jpg",
     "static/media/HornTrax.png": "/horntrax_v2.0/static/media/HornTrax.23d7c509f4d8a5332450.png",
     "index.html": "/horntrax_v2.0/index.html",
-    "main.19f08bca.css.map": "/horntrax_v2.0/static/css/main.19f08bca.css.map",
-    "main.4425f7db.js.map": "/horntrax_v2.0/static/js/main.4425f7db.js.map",
+    "main.bfedaec3.css.map": "/horntrax_v2.0/static/css/main.bfedaec3.css.map",
+    "main.2a231790.js.map": "/horntrax_v2.0/static/js/main.2a231790.js.map",
     "703.fb39196d.chunk.js.map": "/horntrax_v2.0/static/js/703.fb39196d.chunk.js.map",
     "198.6fa572ce.chunk.js.map": "/horntrax_v2.0/static/js/198.6fa572ce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19f08bca.css",
-    "static/js/main.4425f7db.js"
+    "static/css/main.bfedaec3.css",
+    "static/js/main.2a231790.js"
   ]
 }
