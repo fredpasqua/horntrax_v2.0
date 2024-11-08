@@ -245,7 +245,7 @@ function InstrumentList() {
                 </tr>
               </thead>
               <tbody>
-                {filteredInstruments.map((item) => (
+                {filteredInstruments?.map((item) => (
                   <tr key={item.barcode}>
                     <td className="table-style">{item.type}</td>
                     <td className="table-style">{item.location}</td>
