@@ -1,6 +1,7 @@
 import { useState } from "react";
 import QRcodeGenerator from "../../QRcodeGenerator";
 import "./qrCodePrintScreen.css";
+import qrCodeButton from "../QR-Buttons/qrCodeButton";
 function QrCodePrintScreen({ filteredInstruments }) {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -14,6 +15,7 @@ function QrCodePrintScreen({ filteredInstruments }) {
   }
   return (
     <>
+    {<qrCodeButton></qrCodeButton>}
       <div className="qrCodeButtons">
         <button
           className="button"
