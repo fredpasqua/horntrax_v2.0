@@ -198,7 +198,7 @@ function InstrumentList() {
           <Navigate onLoggedOut={onLoggedOut} user={user} />
 
           <div className="top-container">
-            <QrCodeButton></QrCodeButton>
+          
             <AddLoaner forceUpdate={forceUpdate} user={user} />
             <div className="searchBar">
               <div className="searchBarTotal ">

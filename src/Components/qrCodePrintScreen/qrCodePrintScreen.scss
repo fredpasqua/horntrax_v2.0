@@ -1,0 +1,74 @@
+//Variable sizes
+$button-width: 175px !important;
+$button-height: 50px !important;
+$button-border-width: 1px;
+$outer-button-border-radius: 0px !important;
+//variable colors and styles
+$button-text-color: rgb(32, 62, 73);
+$hover-color: #050c5efd;
+$button-background-color: #91bcba;
+$button-border-color: #a1d197;
+$button-font: Arial;
+$button-active-color: rgb(6, 52, 83);
+$text-active-color: #a1d197;
+
+.objectSelectorList {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    list-style-type: none;
+}
+
+.text {
+    width: $button-width;
+    color: $button-text-color;
+    font-family: $button-font;
+    text-align: center;
+}
+
+.selButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $button-width;
+    height: $button-height;
+    background-color: $button-background-color;
+    border: $button-border-width solid $button-border-color;
+    color: $button-text-color;
+    padding: 10px;
+    box-shadow: 3px 2px 9px grey;
+
+}
+
+.selButton:hover {
+    transition: 400ms;
+    background-color: $hover-color;
+    box-shadow: none;
+    color: $text-active-color;
+    font-weight: bold;
+
+}
+
+.selButton:active {
+    background-color: $button-active-color;
+    text-decoration: none;
+    color: $text-active-color;
+}
+
+.selectorButton:focus {
+    background-color: $hover-color;
+    border: 2px cyan solid;
+}
+
+.selectorButtonA {
+    border-top-left-radius: $outer-button-border-radius;
+}
+
+.selectorButtonC {
+    border-top-right-radius: $outer-button-border-radius;
+}
+.qrCodeContainer {
+    padding: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}

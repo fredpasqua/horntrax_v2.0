@@ -1,7 +1,7 @@
 import { useState } from "react";
 import QRcodeGenerator from "../../QRcodeGenerator";
-import "./qrCodePrintScreen.css";
-import qrCodeButton from "../QR-Buttons/qrCodeButton";
+import "./qrCodePrintScreen.scss";
+
 function QrCodePrintScreen({ filteredInstruments }) {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -15,7 +15,37 @@ function QrCodePrintScreen({ filteredInstruments }) {
   }
   return (
     <>
-    {<qrCodeButton></qrCodeButton>}
+      <ul class="objectSelectorList">
+        <li class="text">
+          <button
+            className="selButton selectorButtonA"
+            onClick={() => {
+              setIsVisible(!isVisible);
+            }}
+          >
+            Show/Hide QR Codes
+          </button>
+        </li>
+
+        <li class="text">
+          <button
+            className="selButton selectorButtonC"
+            onClick={() => {
+              handleOnClick();
+            }}
+            style={
+              isVisible === false
+                ? { display: "none" }
+                : {
+                    display: "inline-block",
+                  }
+            }
+          >
+            Print Codes
+          </button>
+        </li>
+      </ul>
+      {/* </>
       <div className="qrCodeButtons">
         <button
           className="button"
@@ -40,7 +70,7 @@ function QrCodePrintScreen({ filteredInstruments }) {
         >
           QR Codes to .PDF
         </button>
-      </div>
+      </div> */}
 
       <div
         className="qrCodeContainer"
