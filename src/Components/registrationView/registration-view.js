@@ -64,7 +64,7 @@ export function RegistrationView() {
           const data = response.data;
           console.log(data);
           alert("User added successfully, please login!");
-          window.open("/login", "_self");
+          window.open("/", "_self");
         })
         .catch((response) => {
           console.error(response);
