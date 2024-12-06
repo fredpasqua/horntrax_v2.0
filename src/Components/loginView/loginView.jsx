@@ -21,15 +21,15 @@ export function LoginView(props) {
       isReq = false;
     } else if (username.length < 5 || username.length > 20) {
       setUsernameErr(
-        "Username must be atleast 5 characters long and no more than 20 char."
+        "Username min 5, max 20 characters"
       );
       isReq = false;
     }
     if (!password) {
-      setPasswordErr("Password is required!");
+      setPasswordErr("Password Required");
       isReq = false;
     } else if (password.length < 6) {
-      setPasswordErr("Password must contain atleast 6 characters");
+      setPasswordErr("Minimum 6 Character");
       isReq = false;
     }
 
@@ -66,7 +66,7 @@ export function LoginView(props) {
     <>
       <Container className="login_page">
         <Row>
-          <Col lg={12}>
+          <Col>
             <CardGroup>
               <Card
                 border="light"
@@ -89,9 +89,20 @@ export function LoginView(props) {
                         onChange={(e) => setUsername(e.target.value)}
                         placeholder=""
                       />
-                      {usernameErr && (
-                        <p style={{ color: "red" }} className="font-italic">
+                      {usernameErr.length > 0 ? (
+                        <p
+                          className="clearFix"
+                          style={{
+                            color: "red",
+                            margin: "0px",
+                            padding: "0px",
+                          }}
+                        >
                           {usernameErr}
+                        </p>
+                      ) : (
+                        <p className="clearFix">
+                          <br></br>
                         </p>
                       )}
                     </Form.Group>
@@ -103,9 +114,20 @@ export function LoginView(props) {
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder=""
                       />
-                      {passwordErr && (
-                        <p style={{ color: "red" }} className="font-italic">
+                      {passwordErr.length > 0 ? (
+                        <p
+                          className="clearFix"
+                          style={{
+                            color: "red",
+                            margin: "0px",
+                            padding: "0px",
+                          }}
+                        >
                           {passwordErr}
+                        </p>
+                      ) : (
+                        <p className="clearFix">
+                          <br></br>
                         </p>
                       )}
                     </Form.Group>

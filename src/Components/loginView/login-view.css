@@ -1,3 +1,8 @@
+.clearFix {
+    margin: 0px;
+    padding: 0px
+}
+
 .login_page {
 display: flex;
     justify-content: center;
@@ -13,6 +18,7 @@ font-family: "Montserrat", sans-serif;
     display: flex;
     align-items: left;
     flex-direction: column;
+   
 }
 
 .login_container img {
