@@ -64,7 +64,7 @@ export function RegistrationView() {
           const data = response.data;
           console.log(data);
           alert("User added successfully, please login!");
-          window.open("/client-loaners_project", "_self");
+          window.open("/login", "_self");
         })
         .catch((response) => {
           console.error(response);
