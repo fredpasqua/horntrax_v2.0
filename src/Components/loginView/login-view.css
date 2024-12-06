@@ -45,12 +45,14 @@ font-weight: 300;
 .loginButton {
 text-align: center;
     margin-top: 10px;
+  
 }
 
 .loginButton Button {
 width: 200px;
     font-size: 25px;
     color: rgb(222, 222, 222);
+    border: none;
 }
 
 .loginButton Button:hover {
