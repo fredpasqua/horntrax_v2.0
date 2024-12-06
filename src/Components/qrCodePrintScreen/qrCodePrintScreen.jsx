@@ -45,32 +45,6 @@ function QrCodePrintScreen({ filteredInstruments }) {
           </button>
         </li>
       </ul>
-      {/* </>
-      <div className="qrCodeButtons">
-        <button
-          className="button"
-          onClick={() => {
-            setIsVisible(!isVisible);
-          }}
-        >
-          GET QR CODES
-        </button>
-        <button
-          className="button"
-          style={
-            isVisible === false
-              ? { display: "none" }
-              : {
-                  display: "inline-block",
-                }
-          }
-          onClick={() => {
-            handleOnClick();
-          }}
-        >
-          QR Codes to .PDF
-        </button>
-      </div> */}
 
       <div
         className="qrCodeContainer"

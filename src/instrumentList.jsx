@@ -18,7 +18,6 @@ import { LoginView } from "./Components/loginView/loginView";
 import Navigate from "./Components/navBar/navbar.js";
 import { PencilSquare } from "react-bootstrap-icons";
 import QrCodePrintScreen from "./Components/qrCodePrintScreen/qrCodePrintScreen.jsx";
-import QrCodeButton from "./Components/QR-Buttons/qrCodeButton.jsx";
 function InstrumentList() {
   const [instruments, setInstruments] = useState([]);
   const [user, setUser] = useState("");
@@ -231,7 +230,6 @@ function InstrumentList() {
                   Total Instruments: {filteredInstruments.length}
                 </p>
               </div>
-              <qrCodeButton/>
               <Scanner handleScan={handleScan}></Scanner>
             </div>
           </div>
