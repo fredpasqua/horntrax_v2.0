@@ -23,7 +23,7 @@ function InstrumentList() {
   const [user, setUser] = useState("");
   const [selectedInstrument, setSelectedInstrument] = useState({});
   const [query, setQuery] = useState([]);
-  const [code, setCode] = useState([]);
+
   const [showModal, setShowModal] = useState(false);
   const [selectedType, setSelectedType] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
@@ -100,11 +100,7 @@ function InstrumentList() {
     setUser("");
   };
 
-  //function to update state of query from scanner component
-  const handleScan = (code) => {
-    setCode(code);
-    setQuery(code);
-  }
+
 
   //creates a list of  instruments prefiltered by selectedType state
   let preFilteredInstruments = [];
@@ -230,7 +226,7 @@ function InstrumentList() {
                   Total Instruments: {filteredInstruments.length}
                 </p>
               </div>
-              <Scanner handleScan={handleScan}></Scanner>
+              <Scanner setQuery={setQuery}></Scanner>
             </div>
           </div>
           <Suspense fallback={<p>Loading....</p>}>

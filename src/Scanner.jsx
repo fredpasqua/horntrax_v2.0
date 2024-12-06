@@ -2,10 +2,16 @@ import React from "react";
 import { useState } from "react";
 import { BarcodeScanner } from "@thewirv/react-barcode-scanner";
 import "./Scanner.css";
-export default function Scanner({ handleScan }) {
+export default function Scanner({setQuery}) {
   const [data, setData] = useState([]);
   const [doScan, setDoScan] = useState(false);
   const [isVisible, setIsVisible] = useState("none");
+  const [code, setCode] = useState([]);
+  //function to update state of query from scanner component
+  const handleScan = (code) => {
+    setCode(code);
+    setQuery(code);
+  };
   return (
     <>
       <div className="scannerWrapper">
