@@ -64,7 +64,7 @@ export function RegistrationView() {
           const data = response.data;
           console.log(data);
           alert("User added successfully, please login!");
-          window.open("/", "_self");
+          window.open("https://fredpasqua.github.io/horntrax_v2.0/", "_self");
         })
         .catch((response) => {
           console.error(response);
