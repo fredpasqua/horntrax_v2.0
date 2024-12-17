@@ -11,7 +11,7 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     -webkit-mask-repeat: no-repeat;
-    animation: cu10 1.5s infinite;
+    animation: cu10 3s infinite;
     margin: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -49,4 +49,6 @@
 .custom-loader-message {
     margin-left: auto;
     margin-right: auto;
+    font-size: 30px;
+    max-width: 80vw;
 }
