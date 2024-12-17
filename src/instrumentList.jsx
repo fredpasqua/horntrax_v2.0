@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import Spinner from "./Components/Spinner/spinner.jsx";
 import axios from "axios";
 import {
@@ -24,7 +24,6 @@ function InstrumentList() {
   const [user, setUser] = useState("");
   const [selectedInstrument, setSelectedInstrument] = useState({});
   const [query, setQuery] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectedType, setSelectedType] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
