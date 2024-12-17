@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Suspense } from "react";
+import Spinner from "./Components/Spinner/spinner.jsx";
 import axios from "axios";
 import {
   CloseButton,
@@ -23,7 +24,7 @@ function InstrumentList() {
   const [user, setUser] = useState("");
   const [selectedInstrument, setSelectedInstrument] = useState({});
   const [query, setQuery] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectedType, setSelectedType] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
@@ -48,6 +49,7 @@ function InstrumentList() {
 
   useEffect(() => {
     async function getLoaners() {
+ 
       await axios
         .get(
           `https://horntrax-api.herokuapp.com/loaners/useridfind/${user._id}`
@@ -64,6 +66,7 @@ function InstrumentList() {
               return 0;
             })
           )
+          
         );
     }
     getLoaners();
@@ -193,7 +196,6 @@ function InstrumentList() {
           <Navigate onLoggedOut={onLoggedOut} user={user} />
 
           <div className="top-container">
-          
             <AddLoaner forceUpdate={forceUpdate} user={user} />
             <div className="searchBar">
               <div className="searchBarTotal ">
@@ -229,7 +231,7 @@ function InstrumentList() {
               <Scanner setQuery={setQuery}></Scanner>
             </div>
           </div>
-          <Suspense fallback={<p>Loading....</p>}>
+         { filteredInstruments.length === 0 ? (<Spinner />) : (
             <Table variant="light" striped bordered hover className="table">
               <thead>
                 <tr>
@@ -240,7 +242,7 @@ function InstrumentList() {
                 </tr>
               </thead>
               <tbody>
-                {filteredInstruments?.map((item) => (
+                {filteredInstruments.map((item) => (
                   <tr key={item.barcode}>
                     <td className="table-style">{item.type}</td>
                     <td className="table-style">{item.location}</td>
@@ -271,16 +273,12 @@ function InstrumentList() {
                   </tr>
                 ))}
               </tbody>
-            </Table>
-          </Suspense>
+            </Table> )}
+        
           <QrCodePrintScreen filteredInstruments={filteredInstruments} />
         </div>
       )}
-      {/* <div className="qrCodeContainer">
-        {filteredInstruments?.map((item) => (
-          <QRcodeGenerator barcode={item.barcode} key={item.barcode} />
-        ))}
-      </div> */}
+   
 
       <div className="reactModal">
         <ReactModal
