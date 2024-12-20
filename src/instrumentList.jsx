@@ -46,31 +46,23 @@ function InstrumentList() {
     show: false,
   });
 
-  useEffect(() => {
-    async function getLoaners() {
- 
-      await axios
-        .get(
-          `https://horntrax-api.herokuapp.com/loaners/useridfind/${user._id}`
-        )
-        .then((res) =>
-          setInstruments(
-            res.data.sort((a, b) => {
-              if (a.type < b.type) {
-                return -1;
-              }
-              if (a.type > b.type) {
-                return 1;
-              }
-              return 0;
-            })
-          )
-          
-        );
+useEffect(() => {
+  const getLoaners = async () => {
+    try {
+      const res = await axios.get(
+        `https://horntrax-api.herokuapp.com/loaners/useridfind/${user._id}`
+      );
+      const sortedInstruments = res.data.sort((a, b) =>
+        a.type < b.type ? -1 : a.type > b.type ? 1 : 0
+      );
+      setInstruments(sortedInstruments);
+    } catch (error) {
+      console.error("Error fetching loaners:", error);
     }
-    getLoaners();
-  }, [updater, user._id]);
+  };
 
+  getLoaners();
+}, [updater, user._id]);
   const handleDeleteConfirmationClose = () => {
     setShowDeleteConfirmation(false);
   };
