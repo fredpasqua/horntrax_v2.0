@@ -230,7 +230,7 @@ function InstrumentList() {
               <Scanner setQuery={setQuery}></Scanner>
             </div>
           </div>
-         { filteredInstruments.length === 0 ? (<Spinner />) : (
+         { instruments.length === 0 ? (<Spinner />) : (
             <Table variant="light" striped bordered hover className="table">
               <thead>
                 <tr>
