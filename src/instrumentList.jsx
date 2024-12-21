@@ -222,7 +222,11 @@ useEffect(() => {
               <Scanner setQuery={setQuery}></Scanner>
             </div>
           </div>
-         { instruments.length === 0 ? (<Spinner />) : (
+
+          {/* Logic for spinner, waits for the stack to complete the prefilteredInstruments variable after fetch from API before displaying the list of instruments*/}
+          {preFilteredInstruments.length === 0 ? (
+            <Spinner />
+          ) : (
             <Table variant="light" striped bordered hover className="table">
               <thead>
                 <tr>
@@ -264,12 +268,12 @@ useEffect(() => {
                   </tr>
                 ))}
               </tbody>
-            </Table> )}
-        
+            </Table>
+          )}
+
           <QrCodePrintScreen filteredInstruments={filteredInstruments} />
         </div>
       )}
-   
 
       <div className="reactModal">
         <ReactModal
