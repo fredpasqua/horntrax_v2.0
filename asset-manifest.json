@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/horntrax_v2.0/static/css/main.1d9fbcbc.css",
+    "main.css": "/horntrax_v2.0/static/css/main.aa2e4b60.css",
     "main.js": "/horntrax_v2.0/static/js/main.64a468b3.js",
     "static/js/703.fb39196d.chunk.js": "/horntrax_v2.0/static/js/703.fb39196d.chunk.js",
     "static/js/198.6fa572ce.chunk.js": "/horntrax_v2.0/static/js/198.6fa572ce.chunk.js",
     "static/media/HornTrax.png": "/horntrax_v2.0/static/media/HornTrax.71e02c53e4c8e66b933f.png",
     "index.html": "/horntrax_v2.0/index.html",
-    "main.1d9fbcbc.css.map": "/horntrax_v2.0/static/css/main.1d9fbcbc.css.map",
+    "main.aa2e4b60.css.map": "/horntrax_v2.0/static/css/main.aa2e4b60.css.map",
     "main.64a468b3.js.map": "/horntrax_v2.0/static/js/main.64a468b3.js.map",
     "703.fb39196d.chunk.js.map": "/horntrax_v2.0/static/js/703.fb39196d.chunk.js.map",
     "198.6fa572ce.chunk.js.map": "/horntrax_v2.0/static/js/198.6fa572ce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d9fbcbc.css",
+    "static/css/main.aa2e4b60.css",
     "static/js/main.64a468b3.js"
   ]
 }
