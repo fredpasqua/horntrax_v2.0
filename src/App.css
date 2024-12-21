@@ -1,9 +1,11 @@
 body {
-  background-image: url(./Images/music.jpg);
-  opacity: 1;
+  /* background-image: url(./Images/music.jpg); */
+  opacity:1;
   padding: 0px;
   margin: 0px;
+  background-color: rgba(5, 106, 122, 0.591) !important;
 }
+
 
 .brand {
   padding: 4px;
