@@ -1,4 +1,5 @@
 body {
+  /* legacy background image commented out */
   /* background-image: url(./Images/music.jpg); */
   opacity:1;
   padding: 0px;
@@ -6,6 +7,10 @@ body {
   background-color: rgba(5, 106, 122, 0.591) !important;
 }
 
+/* Borders for formatting */
+/* * {
+  border: 1px red solid;
+} */
 
 .brand {
   padding: 4px;
@@ -221,7 +226,8 @@ h1 {
 .updateFormButtonsContainer {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 5px;
+  margin: 10px;
 }
 
 .welcome-message {
