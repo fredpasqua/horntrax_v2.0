@@ -21,6 +21,7 @@ import { PencilSquare } from "react-bootstrap-icons";
 import QrCodePrintScreen from "./Components/qrCodePrintScreen/qrCodePrintScreen.jsx";
 function InstrumentList() {
   const [instruments, setInstruments] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [user, setUser] = useState("");
   const [selectedInstrument, setSelectedInstrument] = useState({});
   const [query, setQuery] = useState([]);
@@ -48,6 +49,7 @@ function InstrumentList() {
 
 useEffect(() => {
   const getLoaners = async () => {
+    setLoading(true);
     try {
       const res = await axios.get(
         `https://horntrax-api.herokuapp.com/loaners/useridfind/${user._id}`
@@ -58,11 +60,14 @@ useEffect(() => {
       setInstruments(sortedInstruments);
     } catch (error) {
       console.error("Error fetching loaners:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
   getLoaners();
 }, [updater, user._id]);
+
   const handleDeleteConfirmationClose = () => {
     setShowDeleteConfirmation(false);
   };
@@ -224,7 +229,7 @@ useEffect(() => {
           </div>
 
           {/* Logic for spinner, waits for the stack to complete the prefilteredInstruments variable after fetch from API before displaying the list of instruments*/}
-          {preFilteredInstruments.length === 0 ? (
+          {loading ? (
             <Spinner />
           ) : (
             <Table variant="light" striped bordered hover className="table">
